@@ -1,0 +1,235 @@
+{
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact",
+    "login": "Login",
+    "signup": "Sign Up"
+  },
+  "hero": {
+    "tagline": "Fast & Reliable",
+    "title": "H2H Express",
+    "titleAccent": "Delivery",
+    "subtitle": "Your Trusted Delivery Partner",
+    "description": "From the first mile to the last, we deliver with care and speed.",
+    "signup": "Sign Up",
+    "track": "Track Package",
+    "stat1": "Deliveries",
+    "stat2": "Support",
+    "stat3": "Cities"
+  },
+  "services": {
+    "badge": "Our Services",
+    "heading": "How We Deliver Excellence",
+    "subheading": "Every step crafted to ensure your packages arrive safely, on time, with full transparency.",
+    "stepLabel": "Step",
+    "cta": "Sign Up",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Place Your Order",
+        "description": "Submit a delivery request quickly and effortlessly using our intuitive, easy-to-navigate platform.",
+        "bullets": [
+          "Enter complete pickup and delivery details, including addresses, contact information, and any special instructions",
+          "Select your preferred delivery option: Same-day, Next-day, or Scheduled delivery."
+        ]
+      },
+      {
+        "number": "02",
+        "title": "Our Team Pick It Up",
+        "description": "Our professional courier team will quickly arrive to collect your package from the specified location.",
+        "bullets": []
+      },
+      {
+        "number": "03",
+        "title": "Fast & Secure Delivery",
+        "description": "Your package is carefully handled and delivered efficiently and securely to its destination.",
+        "bullets": []
+      },
+      {
+        "number": "04",
+        "title": "Delivery Confirmation",
+        "description": "Receive instant confirmation as soon as your package is delivered..",
+        "bullets": []
+      }
+    ]
+  },
+  "servicesGrid": {
+    "heading": "Our Services",
+    "subheading": "We do more than deliver your packages — we create value. By adapting our services to your specific needs, we let you focus on your core business while we manage the entire logistics chain.",
+    "items": [
+      {
+        "title": "Daily Pickup",
+        "description": "Collection can be made from your premises or directly from your supplier."
+      },
+      {
+        "title": "Package Storage",
+        "description": "We also offer the possibility of storing cancelled or returned packages for re-shipment to other clients."
+      },
+      {
+        "title": "Efficient Call Center",
+        "description": "To ensure client satisfaction and reduce returns, our call center responds efficiently to their expectations and questions."
+      },
+      {
+        "title": "Dedicated Contact",
+        "description": "Each e-merchant has a dedicated account manager who ensures detailed follow-up of their needs."
+      },
+      {
+        "title": "Delivery Professionalism",
+        "description": "Our experienced delivery drivers guarantee effective communication and quality package distribution, reinforcing your brand image."
+      },
+      {
+        "title": "Fast & Secure Fund Return",
+        "description": "Payment is made exclusively by bank transfer, guaranteeing the speed and security of transactions."
+      },
+      {
+        "title": "Appropriate Packaging",
+        "description": "We offer an adapted and personalized packaging service to ensure optimal protection of your goods during transport."
+      },
+      {
+        "title": "Package Returns",
+        "description": "We facilitate the return of your packages with a smooth procedure, allowing quick recovery of your goods for immediate resale."
+      },
+      {
+        "title": "Control & Continuous Tracking",
+        "description": "We have created a dedicated delivery application, available on computer and mobile, with an intuitive interface."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Contact Us",
+    "subheading": "Need help or more information? Our customer service team is here for you. Reach out anytime — we're always listening to meet your needs.",
+    "phone": { "label": "Phone", "value": "+212 5 20 93 14 12" },
+    "email": { "label": "Email", "value": "contact@h2hexpress.com" },
+    "address": {
+      "label": "Address",
+      "value": "209 Bis Lot Hay Nassim Sidi Maarouف, Casablanca, Morocco"
+    },
+    "whatsapp": {
+      "label": "Contact us on WhatsApp",
+      "number": "212520931412",
+      "cta": "Contact"
+    },
+    "form": {
+      "name": "Full Name",
+      "namePlaceholder": "your full name...",
+      "phone": "Phone Number",
+      "phonePlaceholder": "your phone number...",
+      "email": "Email Address",
+      "emailPlaceholder": "your email address...",
+      "subject": "Request Subject",
+      "service": "Service Concerned",
+      "selectPlaceholder": "— Select —",
+      "message": "Message",
+      "messagePlaceholder": "your message here...",
+      "submit": "Send",
+      "sent": "Sent!",
+      "subjectOptions": [
+        "General Inquiry",
+        "Delivery Issue",
+        "Return Request",
+        "Partnership",
+        "Other"
+      ],
+      "serviceOptions": [
+        "Daily Pickup",
+        "Package Storage",
+        "Call Center",
+        "Fund Return",
+        "Packaging",
+        "Tracking"
+      ]
+    }
+  },
+  "testimonials": {
+    "badge": "Client Reviews",
+    "heading": "Trusted by Hundreds of Merchants",
+    "subheading": "Real feedback from e-commerce businesses who ship with us every day.",
+    "sideTitle": "Why merchants choose H2H Express",
+    "sideText": "From solo sellers to growing brands, our clients trust us to handle their deliveries with care, speed, and transparency — every single time.",
+    "badges": [
+      "Verified Reviews",
+      "5-Star Service",
+      "Same-Day Pickup",
+      "Secure Payments"
+    ],
+    "stats": [
+      { "value": "98%", "label": "Delivery Success Rate" },
+      { "value": "500+", "label": "Active Merchants" },
+      { "value": "4.9★", "label": "Average Rating" }
+    ],
+    "featured": {
+      "name": "Karim Benali",
+      "role": "Founder, ShopDZ",
+      "stars": 5,
+      "text": "H2H Express completely transformed our logistics. Our delivery rate jumped to 96% and customer complaints dropped dramatically. Their team is responsive and genuinely cares about results."
+    },
+    "items": [
+      {
+        "name": "Sara Moussaoui",
+        "role": "E-commerce Manager",
+        "stars": 5,
+        "text": "Fast, reliable, and the notification system keeps our customers happy. We've seen a 30% reduction in support tickets since switching."
+      },
+      {
+        "name": "Youssef El Fassi",
+        "role": "Online Retailer",
+        "stars": 5,
+        "text": "The fund return process is seamless. Bank transfers arrive within 48 hours — that kind of reliability is rare in this market."
+      },
+      {
+        "name": "Nadia Tazi",
+        "role": "Brand Owner",
+        "stars": 4,
+        "text": "Professional drivers who treat packages with care. Our fragile goods have never arrived damaged. Very impressed."
+      },
+      {
+        "name": "Omar Cherkaoui",
+        "role": "Dropshipper",
+        "stars": 5,
+        "text": "The dedicated account manager model is brilliant. Having one person who knows my business makes everything smoother."
+      },
+      {
+        "name": "Leila Hamidi",
+        "role": "Boutique Owner",
+        "stars": 5,
+        "text": "Daily pickup from my supplier saves me hours every week. The tracking app is clean and easy to use for both me and my customers."
+      },
+      {
+        "name": "Mehdi Raji",
+        "role": "Tech Products Seller",
+        "stars": 4,
+        "text": "Great call center team. They handle customer questions professionally and it shows in our reviews — customers feel cared for."
+      },
+      {
+        "name": "Amina Slaoui",
+        "role": "Fashion Retailer",
+        "stars": 5,
+        "text": "The packaging service is a game changer for our brand image. Products arrive looking premium. Customers notice and appreciate it."
+      },
+      {
+        "name": "Hassan Ouali",
+        "role": "General Merchant",
+        "stars": 5,
+        "text": "Switched from another carrier 6 months ago and haven't looked back. Better rates, better service, better communication."
+      }
+    ]
+  },
+  "footer": {
+    "tel": "Tel",
+    "email": "Email",
+    "social": "Social Media",
+    "quickLinks": "Quick Links",
+    "contactUs": "Contact Us",
+    "links": {
+      "home": "Home",
+      "services": "Services",
+      "about": "About Us",
+      "contact": "Contact",
+      "email": "Email",
+      "careers": "Careers",
+      "help": "Help"
+    }
+  }
+}
