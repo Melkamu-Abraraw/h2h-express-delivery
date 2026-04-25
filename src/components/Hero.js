@@ -125,13 +125,13 @@ export default function Hero() {
               href={`/${locale}/register`}
               className="bg-[rgb(var(--color-brand))] hover:bg-[rgb(var(--color-brand-light))] hover:scale-105 active:scale-95 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200"
             >
-              {t("signup")}
+              {t("requestDelivery")}
             </Link>
             <Link
               href={`/${locale}/track`}
               className="border border-gray-300 text-gray-800 px-6 py-3 rounded-lg font-medium flex items-center gap-2 hover:bg-gray-50 hover:scale-105 active:scale-95 transition-all duration-200"
             >
-              {t("track")} 🔍
+              {t("contactUs")}
             </Link>
           </div>
 
@@ -156,22 +156,13 @@ export default function Hero() {
 
         {/* RIGHT — Illustration */}
         <div
-          className={`hero-fade-right delay-300 relative w-64 h-64 flex-shrink-0 flex items-center justify-center ${loaded ? "visible" : ""}`}
+          className={`hero-fade-right delay-300 relative w-120 h-120 flex-shrink-0 flex items-center justify-center ${loaded ? "visible" : ""}`}
         >
-          <div className="hero-circle w-56 h-56 bg-[rgb(var(--color-brand))] rounded-full absolute" />
-
           <img
-            src="/images/hero-delivery.png"
+            src="/images/hero-image-2.jpg"
             alt="Delivery"
-            className="relative z-10 h-60 object-contain drop-shadow-xl"
+            className="relative z-10 h-400 object-contain "
           />
-
-          <div className="float-badge absolute top-2 right-0 bg-white rounded-full w-12 h-12 flex items-center justify-center shadow-md text-orange-500 text-xl">
-            🚚
-          </div>
-          <div className="float-badge-alt absolute bottom-4 left-0 bg-white rounded-full w-11 h-11 flex items-center justify-center shadow-md text-orange-500 text-xl">
-            👥
-          </div>
         </div>
       </section>
     </>
