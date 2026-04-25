@@ -43,7 +43,7 @@ export default function Header() {
             {t("services")}
           </Link>
           <Link
-            href={`/${locale}/contact`}
+            href={`/${locale}/contact-us`}
             className="hover:text-[rgb(var(--color-brand-dark))]"
           >
             {t("contact")}

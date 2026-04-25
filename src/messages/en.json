@@ -237,5 +237,10 @@
     "title": "Our coverage area",
     "description": "We serve thousands of lanes across Canada & Ethiopia. When your network aligns with ours, you gain access to our dependable service and competitive pricing. We offer Intermodal shipping within our coverage areas.",
     "mapAlt": "Coverage area map showing service locations"
+  },
+  "trustedPartners": {
+    "badge": "Our Partners",
+    "title": "Trusted by industry leaders",
+    "description": "We collaborate with the world's most reliable logistics and shipping companies to deliver excellence."
   }
 }
