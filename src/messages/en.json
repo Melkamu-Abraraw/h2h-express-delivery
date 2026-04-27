@@ -242,5 +242,41 @@
     "badge": "Our Partners",
     "title": "Trusted by industry leaders",
     "description": "We collaborate with the world's most reliable logistics and shipping companies to deliver excellence."
+  },
+
+  "Services": {
+    "heading": "Choose The Right Service",
+    "highlight": "For You",
+
+    "express": {
+      "title": "Express Delivery",
+      "description": "Need it now? With Eshi Express, you can have your packages delivered in as little as 90 minutes anywhere in Addis Ababa. Whether it's a forgotten document, urgent medicine, or a surprise gift, our team ensures top-notch speed and reliability, so you never have to wait."
+    },
+
+    "sameDay": {
+      "title": "Same-Day Delivery",
+      "description": "For time-sensitive packages, our same-day delivery ensures your items reach their destination before 6 PM. We handle every delivery with care and efficiency, so your packages are delivered on time, every time."
+    },
+
+    "nextDay": {
+      "title": "Next-Day Delivery",
+      "description": "For non-urgent deliveries, our next-day service is both cost-effective and efficient. Ideal for packages up to 1kg, we guarantee safe delivery within 24 hours, providing peace of mind at an affordable price."
+    },
+
+    "additional": {
+      "title": "Additional Services",
+      "description": "Beyond delivery, Eshi Express offers value-added services, including warehousing for lightweight packages, cash-on-collection for online businesses, and insurance coverage for lost or damaged goods. These services ensure convenience and peace of mind."
+    }
+  },
+  "login": {
+    "title": "Login to your account",
+    "description": "Enter your email below to login to your account",
+    "signup": "Sign Up",
+    "email": "Email",
+    "emailPlaceholder": "m@example.com",
+    "password": "Password",
+    "forgot": "Forgot your password?",
+    "login": "Login",
+    "google": "Login with Google"
   }
 }

@@ -2,6 +2,7 @@ import "../globals.css";
 import { NextIntlClientProvider } from "next-intl";
 import { Inter } from "next/font/google";
 import Header from "@/components/common/Header";
+import Footer from "@/components/Footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -18,6 +19,7 @@ export default async function LocaleLayout({ children, params }) {
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Header />
           {children}
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>

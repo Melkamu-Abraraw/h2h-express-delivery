@@ -15,7 +15,6 @@ export default function Home() {
       <ServicesSection />
       <Testimonialssection />
       <CoverageArea />
-      <Footer />
     </div>
   );
 }

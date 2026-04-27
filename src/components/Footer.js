@@ -10,7 +10,7 @@ export default function Footer() {
   return (
     <footer
       dir={isRtl ? "rtl" : "ltr"}
-      className="relative py-2 bg-gradient-to-r from-[rgb(var(--color-brand-light))] to-[rgb(var(--color-brand-dark))] text-white overflow-hidden"
+      className="relative bg-gradient-to-r from-[rgb(var(--color-brand-light))] to-[rgb(var(--color-brand-dark))] text-white overflow-hidden"
     >
       {/* ── Curved top ── */}
       <div className="absolute top-0 left-0 w-full overflow-hidden leading-none">
@@ -89,7 +89,7 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-      <div className="hidden md:block absolute bottom-11 right-90">
+      <div className="hidden md:block absolute bottom-7 right-90">
         <img
           src="/images/footer-image.png"
           alt="delivery"
