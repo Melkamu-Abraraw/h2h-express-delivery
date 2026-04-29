@@ -26,10 +26,10 @@ export default function CoverageArea() {
         {/* Right: Map image */}
         <div className="flex-1 flex justify-center items-center">
           <Image
-            src="/images/delivery-destinations-image.png"
+            src="/images/h2h-coverage.png"
             alt={t("mapAlt")}
             width={500}
-            height={400}
+            height={500}
             className="w-full max-w-xl object-contain"
             priority
           />

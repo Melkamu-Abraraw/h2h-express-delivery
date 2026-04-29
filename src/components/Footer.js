@@ -89,7 +89,7 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-      <div className="hidden md:block absolute bottom-7 right-90">
+      <div className="hidden md:block absolute bottom-0 right-90">
         <img
           src="/images/footer-image.png"
           alt="delivery"

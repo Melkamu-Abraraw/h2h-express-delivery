@@ -31,7 +31,7 @@ export default function Header() {
             {t("home")}
           </Link>
           <Link
-            href={`/${locale}/pricing`}
+            href={`/${locale}/about-us`}
             className="hover:text-[rgb(var(--color-brand-dark))]"
           >
             {t("about")}
@@ -84,7 +84,7 @@ export default function Header() {
         <div className="hidden md:flex flex-1 justify-end items-center gap-4 text-sm">
           {/* 🌍 Language Switcher */}
           <div className="flex gap-2 border px-2 py-1 rounded-md">
-            {["en", "am", "ar"].map((lng) => (
+            {["en", "am", "ti"].map((lng) => (
               <button
                 key={lng}
                 onClick={() => changeLanguage(lng)}

@@ -278,5 +278,157 @@
     "forgot": "Forgot your password?",
     "login": "Login",
     "google": "Login with Google"
+  },
+  "about": {
+    "hero": {
+      "label": "About Us",
+      "titleLine1": "Delivering More",
+      "titleLine2": "Than Packages.",
+      "titleHighlight": "Delivering Trust.",
+      "description": "We are a Canada-based delivery service committed to connecting people, businesses, and communities with speed, care, and reliability. Whether it is across the city or across continents, we make every delivery count.",
+      "button": "Learn More About Us",
+      "imageAlt": "Hand to Hand delivery van",
+      "features": {
+        "fast": "Fast & Reliable Delivery",
+        "international": "International & Local Shipping",
+        "secure": "Secure Handling",
+        "customer": "Customer First Approach"
+      }
+    },
+    "mission": {
+      "title": "Our Mission",
+      "description": "To provide seamless, secure, and efficient delivery solutions that empower businesses and bring people closer together."
+    },
+    "stats": {
+      "packages": {
+        "number": "10K+",
+        "label": "Packages Delivered"
+      },
+      "customers": {
+        "number": "5K+",
+        "label": "Happy Customers"
+      },
+      "countries": {
+        "number": "3+",
+        "label": "Countries Connected"
+      },
+      "delivery": {
+        "number": "99%",
+        "label": "On-Time Delivery"
+      }
+    },
+    "story": {
+      "label": "Our Story",
+      "titleLine1": "Built on Trust.",
+      "titleLine2": "Driven by",
+      "titleHighlight": "Purpose.",
+      "description": "From a simple idea to a trusted delivery partner, our journey is built on dedication, hard work, and a passion for connecting people and businesses.",
+      "button": "Our Full Story",
+      "steps": {
+        "beginning": {
+          "title": "Where It All Began",
+          "description": "What started as a small local service has grown into a reliable delivery network across Canada and beyond."
+        },
+        "growing": {
+          "title": "Growing Together",
+          "description": "Through innovation, technology, and partnerships, we continue to expand and improve every day."
+        },
+        "future": {
+          "title": "Looking Ahead",
+          "description": "Our mission is to keep pushing boundaries and deliver excellence in every package we handle."
+        }
+      }
+    },
+    "team": {
+      "label": "Our Team",
+      "title": "The People Behind Every Delivery",
+      "description": "A passionate team committed to delivering excellence every single day.",
+      "roles": {
+        "founder": "CEO & Founder",
+        "operations": "Head of Operations",
+        "logistics": "Logistics Lead",
+        "marketing": "Marketing Manager",
+        "customer": "Customer Success Lead",
+        "manager": "Operations Manager"
+      }
+    },
+    "workplace": {
+      "label": "Our Work Place",
+      "imageAlt": "Hand to Hand workplace"
+    },
+    "commitment": {
+      "title": "Our Commitment",
+      "description": "We go the extra mile to make sure every delivery creates a lasting impact.",
+      "button": "Work With Us",
+      "items": {
+        "trust": {
+          "title": "Trust",
+          "description": "We handle every package as if it were our own."
+        },
+        "reliability": {
+          "title": "Reliability",
+          "description": "You can count on us, every time, everywhere."
+        },
+        "care": {
+          "title": "Care",
+          "description": "Our customers are at the heart of everything we do."
+        },
+        "growth": {
+          "title": "Growth",
+          "description": "We continuously improve to serve you better."
+        }
+      }
+    }
+  },
+  "Service": {
+    "label": "OUR SERVICES",
+    "title": "How We Deliver Excellence",
+    "description": "Every step crafted to ensure your packages arrive safely, on time, with full transparency.",
+    "steps": {
+      "step1": {
+        "title": "Place Your Order",
+        "desc": "Submit your delivery request quickly.",
+        "points": ["Enter pickup & delivery details", "Choose delivery option"]
+      },
+      "step2": {
+        "title": "Our Team Picks It Up",
+        "desc": "Courier arrives quickly.",
+        "points": ["Handled with care", "Live updates"]
+      },
+      "step3": {
+        "title": "Fast & Secure Delivery",
+        "desc": "Safe transportation.",
+        "points": ["Real-time tracking", "On-time delivery"]
+      },
+      "step4": {
+        "title": "Delivery Confirmation",
+        "desc": "Proof of delivery.",
+        "points": ["Instant confirmation", "SMS/email updates"]
+      }
+    },
+    "cta": {
+      "title": "Ready to Get Started?",
+      "description": "Start your delivery journey today.",
+      "button": "Start Now"
+    }
+  },
+  "faq": {
+    "label": "FAQs",
+    "title": {
+      "line1": "Questions?",
+      "line2": "Glad you asked"
+    },
+    "questions": {
+      "q1": "Do you handle international shipments?",
+      "q2": "What types of shipping services do you offer?",
+      "q3": "Can I track my shipment?",
+      "q4": "How long does delivery take?"
+    },
+    "answers": {
+      "a1": "Yes, we offer international shipping to a wide range of countries. Please check our shipping policy or contact customer support for specific destination availability.",
+      "a2": "We provide several shipping options including standard, expedited, and express services.",
+      "a3": "Absolutely. Once your order is shipped, you will receive a tracking number via email.",
+      "a4": "Delivery times vary depending on the shipping method and destination."
+    }
   }
 }

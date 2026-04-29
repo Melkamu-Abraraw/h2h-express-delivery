@@ -5,6 +5,7 @@ import Testimonialssection from "@/components/Testimonialssection";
 import Footer from "@/components/Footer";
 import CoverageArea from "@/components/CoverageArea";
 import TrustedPartners from "@/components/TrustedPartners";
+import FaqSection from "@/components/Faq";
 // Pass lang as a prop from your i18n setup
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <ServicesSection />
       <Testimonialssection />
       <CoverageArea />
+      <FaqSection />
     </div>
   );
 }

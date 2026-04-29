@@ -50,7 +50,7 @@ export default function ServicesPage() {
       </motion.div>
 
       {/* Express */}
-      <div className="grid md:grid-cols-2 gap-10 items-center mb-20">
+      <div className="grid md:grid-cols-2 gap-14 items-center mb-20">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -70,10 +70,7 @@ export default function ServicesPage() {
           viewport={{ once: true }}
           variants={fadeRight}
         >
-          <img
-            src="/images/services/service-image-3.jpg"
-            className="max-w-xs"
-          />
+          <img src="/images/service_1.png" className="max-w-xl" />
         </motion.div>
       </div>
 
@@ -86,10 +83,7 @@ export default function ServicesPage() {
           viewport={{ once: true }}
           variants={fadeLeft}
         >
-          <img
-            src="/images/services/service-image-2.jpg"
-            className="max-w-xs"
-          />
+          <img src="/images/service_2.png" className="max-w-xl" />
         </motion.div>
 
         <motion.div
@@ -127,10 +121,7 @@ export default function ServicesPage() {
           viewport={{ once: true }}
           variants={fadeRight}
         >
-          <img
-            src="/images/services/service-image-3.jpg"
-            className="max-w-xs"
-          />
+          <img src="/images/service_3.png" className="max-w-xl" />
         </motion.div>
       </div>
 
@@ -143,10 +134,7 @@ export default function ServicesPage() {
           viewport={{ once: true }}
           variants={fadeLeft}
         >
-          <img
-            src="/images/services/service-image-3.jpg"
-            className="max-w-xs"
-          />
+          <img src="/images/service_4.png" className="max-w-xl" />
         </motion.div>
 
         <motion.div
