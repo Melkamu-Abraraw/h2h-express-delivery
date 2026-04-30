@@ -69,14 +69,14 @@ export default function DeliveryProcess() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-10 items-center">
-          <div className="relative rounded-2xl overflow-hidden shadow-xl">
+        <div className="grid gap-10 items-center lg:grid-cols-2">
+          <div className="relative order-2 lg:order-1 rounded-2xl overflow-hidden shadow-xl">
             <Image
               src={steps[currentStep - 1].image}
               alt="delivery"
               width={600}
               height={600}
-              className="object-cover w-full h-[800px]"
+              className="object-cover w-full h-[360px] md:h-[500px] lg:h-[800px]"
             />
 
             <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent p-6 text-white">
@@ -101,7 +101,7 @@ export default function DeliveryProcess() {
             </div>
           </div>
 
-          <div className="relative">
+          <div className="relative order-1 lg:order-2">
             <div className="absolute left-5 top-0 h-[75%] w-[2px] bg-gray-200" />
 
             <div className="space-y-8">
@@ -149,17 +149,21 @@ export default function DeliveryProcess() {
           </div>
         </div>
       </div>
-      <section className=" py-20 ">
+      <section className="py-10 md:py-20">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="flex items-center gap-20">
-            <div className="flex items-center gap-4">
+          <div className="flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-20">
+            <div className="flex items-start md:items-center gap-4">
               <Rocket className="w-8 h-8 text-yellow-500" />
               <div>
-                <h3 className="text-2xl font-bold">{t("cta.title")}</h3>
-                <p className="text-gray-500">{t("cta.description")}</p>
+                <h3 className="text-xl md:text-2xl font-bold">
+                  {t("cta.title")}
+                </h3>
+                <p className="text-sm md:text-base text-gray-500">
+                  {t("cta.description")}
+                </p>
               </div>
             </div>
-            <button className="bg-yellow-400 text-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-500 transition">
+            <button className="bg-yellow-400 text-black px-4 py-2 text-sm md:px-6 md:py-3 rounded-lg font-semibold hover:bg-yellow-500 transition">
               {t("cta.button")}
             </button>
           </div>

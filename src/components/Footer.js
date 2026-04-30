@@ -30,12 +30,12 @@ export default function Footer() {
       <div className="relative max-w-6xl mx-auto px-6 pt-24 pb-12 grid md:grid-cols-3 gap-10">
         {/* Column 1 */}
         <div>
-          <div className="bg-white text-black font-bold px-4 py-2 rounded-full inline-block mb-4">
+          <div className="mb-4 flex h-[140px] items-center justify-center">
             <img
-              src="/images/h2h-logo.png"
+              src="/images/logo H2H.png"
               alt="delivery"
-              className="h-[50px] object-contain"
-            />{" "}
+              className="h-[120px] object-contain"
+            />
           </div>
 
           <p className="text-sm opacity-90 mb-3">

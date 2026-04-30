@@ -99,14 +99,17 @@ export default function Header() {
             ))}
           </div>
 
-          <Link
-            href={`/${locale}/login`}
+          <button
+            type="button"
             className="text-gray-700 hover:text-[rgb(var(--color-brand-dark))]"
           >
             {t("login")}
-          </Link>
+          </button>
 
-          <button className="bg-[rgb(var(--color-brand))] text-white px-4 py-2 rounded-md flex items-center gap-2 hover:bg-[rgb(var(--color-brand-light))] transition">
+          <button
+            type="button"
+            className="bg-[rgb(var(--color-brand))] text-white px-4 py-2 rounded-md flex items-center gap-2 hover:bg-[rgb(var(--color-brand-light))] transition"
+          >
             {t("signup")} <span className="text-black">👤</span>
           </button>
         </div>
@@ -116,10 +119,10 @@ export default function Header() {
       {open && (
         <div className="md:hidden bg-white border-t px-4 py-4 space-y-1">
           {[
-            { name: t("home"), href: "" },
-            { name: t("about"), href: "/pricing" },
+            { name: t("home"), href: "/" },
+            { name: t("about"), href: "/about-us" },
             { name: t("services"), href: "/services" },
-            { name: t("contact"), href: "/contact" },
+            { name: t("contact"), href: "/contact-us" },
           ].map((item, i) => (
             <Link
               key={i}
@@ -145,14 +148,17 @@ export default function Header() {
           </div>
 
           <div className="flex flex-col gap-2 pt-3 border-t mt-3">
-            <Link
-              href={`/${locale}/login`}
-              className="block px-3 py-2 rounded-md text-gray-700 hover:bg-gray-100"
+            <button
+              type="button"
+              className="block w-full text-left px-3 py-2 rounded-md text-gray-700 hover:bg-gray-100"
             >
               {t("login")}
-            </Link>
+            </button>
 
-            <button className="bg-[rgb(var(--color-brand))] text-white px-4 py-2 rounded-md">
+            <button
+              type="button"
+              className="bg-[rgb(var(--color-brand))] text-white px-4 py-2 rounded-md"
+            >
               {t("signup")}
             </button>
           </div>

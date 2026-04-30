@@ -88,7 +88,7 @@ export default function Hero() {
         }
       `}</style>
 
-      <section className="rounded-2xl overflow-hidden max-w-6xl mx-auto px-4 py-20 flex items-center justify-between gap-8 min-h-[300px] relative">
+      <section className="rounded-2xl overflow-hidden max-w-6xl mx-auto px-4 py-20 flex flex-col md:flex-row items-center justify-between gap-4 min-h-[300px] relative">
         {/* LEFT — Text */}
         <div className="flex-1 max-w-xl z-10">
           <p
@@ -122,13 +122,13 @@ export default function Hero() {
             className={`hero-fade-up delay-500 flex gap-3 flex-wrap ${loaded ? "visible" : ""}`}
           >
             <Link
-              href={`/${locale}/register`}
+              href={`/`}
               className="bg-[rgb(var(--color-brand))] hover:bg-[rgb(var(--color-brand-light))] hover:scale-105 active:scale-95 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200"
             >
               {t("requestDelivery")}
             </Link>
             <Link
-              href={`/${locale}/track`}
+              href={`/${locale}/contact-us`}
               className="border border-gray-300 text-gray-800 px-6 py-3 rounded-lg font-medium flex items-center gap-2 hover:bg-gray-50 hover:scale-105 active:scale-95 transition-all duration-200"
             >
               {t("contactUs")}
@@ -156,12 +156,12 @@ export default function Hero() {
 
         {/* RIGHT — Illustration */}
         <div
-          className={`hero-fade-right delay-300 relative w-120 h-120 flex-shrink-0 flex items-center justify-center ${loaded ? "visible" : ""}`}
+          className={`hero-fade-right delay-300 relative w-110 md:w-120 h-120 flex-shrink-0 flex items-center justify-center ${loaded ? "visible" : ""}`}
         >
           <img
             src="/images/hero-image-2.jpg"
             alt="Delivery"
-            className="relative z-10 h-400 object-contain "
+            className="relative z-10 h-400 object-contain px-2 md:p-0"
           />
         </div>
       </section>

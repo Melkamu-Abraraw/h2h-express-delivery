@@ -64,30 +64,36 @@ export default function ServicesPage() {
         </motion.div>
 
         <motion.div
-          className="flex justify-center"
+          className="flex justify-start md:justify-center"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeRight}
         >
-          <img src="/images/service_1.png" className="max-w-xl" />
+          <img
+            src="/images/service_1.png"
+            className="w-full max-w-full h-auto"
+          />
         </motion.div>
       </div>
 
       {/* Same Day */}
       <div className="grid md:grid-cols-2 gap-10 items-center mb-20">
         <motion.div
-          className="flex justify-center md:order-1"
+          className="flex justify-start md:justify-center order-2 md:order-1"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeLeft}
         >
-          <img src="/images/service_2.png" className="max-w-xl" />
+          <img
+            src="/images/service_2.png"
+            className="w-full max-w-full h-auto"
+          />
         </motion.div>
 
         <motion.div
-          className="md:order-2"
+          className="order-1 md:order-2"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -115,30 +121,36 @@ export default function ServicesPage() {
         </motion.div>
 
         <motion.div
-          className="flex justify-center"
+          className="flex justify-start md:justify-center order-2 md:order-2"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeRight}
         >
-          <img src="/images/service_3.png" className="max-w-xl" />
+          <img
+            src="/images/service_3.png"
+            className="w-full max-w-full h-auto"
+          />
         </motion.div>
       </div>
 
       {/* Additional */}
       <div className="grid md:grid-cols-2 gap-10 items-center">
         <motion.div
-          className="flex justify-center md:order-1"
+          className="flex justify-start md:justify-center order-2 md:order-1"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeLeft}
         >
-          <img src="/images/service_4.png" className="max-w-xl" />
+          <img
+            src="/images/service_4.png"
+            className="w-full max-w-full h-auto"
+          />
         </motion.div>
 
         <motion.div
-          className="md:order-2"
+          className="order-1 md:order-2"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
