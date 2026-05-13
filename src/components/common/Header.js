@@ -67,19 +67,31 @@ export default function Header() {
         </button>
 
         {/* CENTER LOGO */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 top-0.5 md:top-0.5 z-50">
+        {/* CENTER LOGO */}
+        {/* CENTER LOGO */}
+        {/* CENTER LOGO */}
+        <div className="absolute left-1/2 transform -translate-x-1/2 bottom-0 translate-y-1/2 z-50">
           <Link href={`/${locale}`}>
-            <Image
-              src="/images/h2h-logo.png"
-              alt="Logo"
-              width={100}
-              height={100}
-              loading="eager"
-              className="object-contain w-[60px] h-[60px] md:w-[100px] md:h-[100px]"
-            />
+            <div className="flex flex-col items-center">
+              <Image
+                src="/images/H2H_Logo.png"
+                alt="Logo"
+                width={100}
+                height={100}
+                loading="eager"
+                className="object-contain w-[60px] h-[60px] md:w-[100px] md:h-[100px]"
+              />
+              <div className="flex flex-col items-center leading-tight mt-0.5">
+                <span className="text-[9px] md:text-[11px] font-bold tracking-[2px] text-[#D4860A]">
+                  HAND TO HAND
+                </span>
+                <span className="text-[7px] md:text-[9px] font-medium tracking-[1.5px] text-[#8B5E0A]">
+                  EXPRESS DELIVERY
+                </span>
+              </div>
+            </div>
           </Link>
         </div>
-
         {/* RIGHT (Desktop) */}
         <div className="hidden md:flex flex-1 justify-end items-center gap-4 text-sm">
           {/* 🌍 Language Switcher */}
@@ -136,7 +148,7 @@ export default function Header() {
 
           {/* 🌍 Mobile Language Switcher */}
           <div className="flex gap-2 pt-3 border-t mt-3">
-            {["en", "am", "ar"].map((lng) => (
+            {["en", "am", "ti"].map((lng) => (
               <button
                 key={lng}
                 onClick={() => changeLanguage(lng)}
