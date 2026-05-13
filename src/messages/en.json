@@ -230,7 +230,78 @@
       "email": "Email",
       "careers": "Careers",
       "help": "Help"
-    }
+    },
+    "aboutCompany": "About H2H Express",
+    "companyDescription": "H2H Express is a fast, reliable delivery service dedicated to connecting businesses and customers across Ethiopia and beyond with exceptional logistics solutions.",
+    "mission": "Our Mission",
+    "missionStatement": "To provide fast, secure, and transparent delivery services that empower businesses to grow and customers to trust.",
+    "allRightsReserved": "© {year} H2H Express. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service"
+  },
+  "whyChooseUs": {
+    "tag": "Why H2H Express",
+    "headline1": "Delivery you can",
+    "headline2": "actually rely on.",
+    "sub": "We move parcels the way they should be moved — fast, safe, and with full visibility from pickup to doorstep.",
+    "features": [
+      {
+        "title": "Same-day delivery",
+        "description": "Order by noon, delivered by evening. We don't hold your parcels overnight."
+      },
+      {
+        "title": "Live tracking",
+        "description": "Real-time GPS updates so you and your customer always know where the package is."
+      },
+      {
+        "title": "Insured shipments",
+        "description": "Every package is covered. If something goes wrong, we make it right — no questions asked."
+      },
+      {
+        "title": "24/7 support",
+        "description": "A real person picks up. Our ops team is on call around the clock, every day of the year."
+      }
+    ]
+  },
+  "About": {
+    "tag": "About us",
+    "heroLine1": "Moving things that",
+    "heroLine2": "matter.",
+    "heroParagraph": "H2H Express was built for one reason — because businesses and people deserve a delivery partner that actually shows up. Fast, trackable, and honest.",
+    "storyTitle": "Our story",
+    "storyBody": "H2H Express started in Addis Ababa with a simple idea: hand-to-hand delivery, done right.\n\nWe saw how broken logistics was for small businesses — late shipments, zero tracking, unreliable couriers. So we built the alternative. Today we serve thousands of customers across the region.",
+    "stats": [
+      { "value": "10K+", "label": "Deliveries completed" },
+      { "value": "98%", "label": "On-time rate" },
+      { "value": "50+", "label": "Cities covered" }
+    ],
+    "values": [
+      {
+        "title": "Speed",
+        "desc": "Same-day delivery is our standard, not an upgrade."
+      },
+      {
+        "title": "Transparency",
+        "desc": "Live tracking and honest communication, always."
+      },
+      {
+        "title": "Care",
+        "desc": "Every parcel handled like it belongs to family."
+      }
+    ],
+    "teamTitle": "The team behind it",
+    "team": [
+      { "initials": "AB", "name": "Abebe Bekele", "role": "CEO & Co-founder" },
+      {
+        "initials": "ST",
+        "name": "Sara Tesfaye",
+        "role": "Head of Operations"
+      },
+      { "initials": "DM", "name": "Dawit Mehari", "role": "Tech Lead" }
+    ],
+    "ctaTitle": "Ready to ship with us?",
+    "ctaSub": "Join thousands of businesses that trust H2H Express.",
+    "ctaButton": "Get started"
   },
   "coverageArea": {
     "badge": "Coverage Area",

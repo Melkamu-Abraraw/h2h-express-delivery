@@ -1,11 +1,15 @@
 "use client";
 
 import { useTranslations, useLocale } from "next-intl";
+import { FaFacebook } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa6";
+import { FaTiktok } from "react-icons/fa";
 
 export default function Footer() {
   const t = useTranslations("footer");
   const locale = useLocale();
   const isRtl = locale === "ar";
+  const currentYear = new Date().getFullYear();
 
   return (
     <footer
@@ -27,14 +31,14 @@ export default function Footer() {
       </div>
 
       {/* ── Content ── */}
-      <div className="relative max-w-6xl mx-auto px-6 pt-24 pb-12 grid md:grid-cols-3 gap-10">
+      <div className="relative max-w-6xl mx-auto px-6 pt-18 pb-5 grid md:grid-cols-4 gap-10">
         {/* Column 1 */}
         <div>
-          <div className="mb-4 flex h-[140px] items-center justify-center">
+          <div className="mb-0  h-[140px] ">
             <img
-              src="/images/logo H2H.png"
+              src="/images/H2H_logo.png"
               alt="delivery"
-              className="h-[120px] object-contain"
+              className="h-[90px] object-contain"
             />
           </div>
 
@@ -55,15 +59,30 @@ export default function Footer() {
           </p>
 
           <div className="flex gap-3 mt-2">
-            <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
-              f
-            </div>
-            <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
-              in
-            </div>
-            <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
-              ig
-            </div>
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/40 transition"
+            >
+              <FaFacebook size={16} />
+            </a>
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/40 transition"
+            >
+              <FaTiktok size={16} />
+            </a>
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/40 transition"
+            >
+              <FaInstagram size={16} />
+            </a>
           </div>
         </div>
 
@@ -88,14 +107,29 @@ export default function Footer() {
             <li>{t("links.contact")}</li>
           </ul>
         </div>
+
+        {/* Column 4 - About Company */}
+        <div>
+          <h4 className="font-semibold mb-4">{t("aboutCompany")}</h4>
+          <p className="text-sm opacity-90 mb-4">{t("companyDescription")}</p>
+        </div>
       </div>
-      <div className="hidden md:block absolute bottom-0 right-90">
-        <img
-          src="/images/footer-image.png"
-          alt="delivery"
-          className="h-[400px] object-contain"
-        />{" "}
+
+      {/* ── Bottom Section ── */}
+      <div className="relative border-t border-white/20 px-6 py-6">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row  md:px-4 justify-between items-center text-sm opacity-85">
+          <p>{t("allRightsReserved", { year: currentYear })}</p>
+          <div className="flex gap-6">
+            <a href="#" className="hover:opacity-100 transition">
+              {t("privacyPolicy")}
+            </a>
+            <a href="#" className="hover:opacity-100 transition">
+              {t("termsOfService")}
+            </a>
+          </div>
+        </div>
       </div>
+
       {/* ── Right Image ── */}
     </footer>
   );

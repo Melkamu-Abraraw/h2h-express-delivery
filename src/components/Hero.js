@@ -2,6 +2,61 @@
 import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+function parseStatValue(value) {
+  const match = value.match(/^(\d+)/);
+  return match ? parseInt(match[1], 10) : null;
+}
+
+function AnimatedStat({ value, label, visible, delay = 0 }) {
+  const [display, setDisplay] = useState(value);
+  const frameRef = useRef(null);
+
+  useEffect(() => {
+    if (!visible) return;
+
+    const numeric = parseStatValue(value);
+    if (numeric === null) return; // e.g. "24/7" — skip counting
+
+    const suffix = value.replace(/^\d+/, ""); // e.g. "K+", "/7", "+"
+    const duration = 1800; // ms
+    const start = performance.now();
+
+    const tick = (now) => {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      // Ease out cubic
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const current = Math.round(eased * numeric);
+      setDisplay(`${current}${suffix}`);
+      if (progress < 1) frameRef.current = requestAnimationFrame(tick);
+    };
+
+    const timeout = setTimeout(() => {
+      frameRef.current = requestAnimationFrame(tick);
+    }, delay);
+
+    return () => {
+      clearTimeout(timeout);
+      cancelAnimationFrame(frameRef.current);
+    };
+  }, [visible, value, delay]);
+
+  return (
+    <div className="text-center">
+      <p
+        className="text-2xl font-extrabold text-gray-900"
+        style={{
+          animation: visible
+            ? `riseUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) ${delay}ms both`
+            : "none",
+        }}
+      >
+        {display}
+      </p>
+      <p className="text-xs text-gray-400">{label}</p>
+    </div>
+  );
+}
 
 export default function Hero() {
   const t = useTranslations("hero");
@@ -138,18 +193,17 @@ export default function Hero() {
           {/* Stats */}
           <div ref={statsRef} className="flex gap-8 mt-8">
             {[
-              { value: "10K+", label: t("stat1"), delay: "delay-100" },
-              { value: "24/7", label: t("stat2"), delay: "delay-200" },
-              { value: "50+", label: t("stat3"), delay: "delay-300" },
+              { value: "10K+", label: t("stat1"), delay: 200 },
+              { value: "24/7", label: t("stat2"), delay: 200 },
+              { value: "50+", label: t("stat3"), delay: 300 },
             ].map((s, i) => (
-              <div key={i} className="text-center">
-                <p
-                  className={`stat-count text-2xl font-extrabold text-gray-900 ${statsVisible ? "pop" : ""} ${s.delay}`}
-                >
-                  {s.value}
-                </p>
-                <p className="text-xs text-gray-400">{s.label}</p>
-              </div>
+              <AnimatedStat
+                key={i}
+                value={s.value}
+                label={s.label}
+                visible={statsVisible}
+                delay={s.delay}
+              />
             ))}
           </div>
         </div>

@@ -9,12 +9,10 @@ import {
   Users,
   Zap,
   UserCheck,
-  Handshake,
   Clock,
   TrendingUp,
   Flag,
   Rocket,
-  ArrowRight,
   ChevronDown,
   ChevronLeft,
   ChevronRight,
@@ -23,68 +21,28 @@ import {
 export default function AboutPage() {
   const t = useTranslations("about");
   const teamRef = useRef(null);
-  const workplaceRef = useRef(null);
 
   const scrollTeam = (direction) => {
     if (teamRef.current) {
-      const scrollAmount = 300; // Adjust based on card width
       teamRef.current.scrollBy({
-        left: direction === "left" ? -scrollAmount : scrollAmount,
-        behavior: "smooth",
-      });
-    }
-  };
-
-  const scrollWorkplace = (direction) => {
-    if (workplaceRef.current) {
-      const scrollAmount = 200; // Adjust based on image width
-      workplaceRef.current.scrollBy({
-        left: direction === "left" ? -scrollAmount : scrollAmount,
+        left: direction === "left" ? -300 : 300,
         behavior: "smooth",
       });
     }
   };
 
   const stats = [
-    {
-      icon: Package,
-      number: t("stats.packages.number"),
-      label: t("stats.packages.label"),
-    },
-    {
-      icon: Users,
-      number: t("stats.customers.number"),
-      label: t("stats.customers.label"),
-    },
-    {
-      icon: Globe,
-      number: t("stats.countries.number"),
-      label: t("stats.countries.label"),
-    },
-    {
-      icon: ShieldCheck,
-      number: t("stats.delivery.number"),
-      label: t("stats.delivery.label"),
-    },
+    { icon: Package, number: "10K+", label: t("stats.packages.label") },
+    { icon: Users, number: "5K+", label: t("stats.customers.label") },
+    { icon: Globe, number: "20+", label: t("stats.countries.label") },
+    { icon: ShieldCheck, number: "98%", label: t("stats.delivery.label") },
   ];
 
   const features = [
-    {
-      icon: Zap,
-      title: t("hero.features.fast"),
-    },
-    {
-      icon: Globe,
-      title: t("hero.features.international"),
-    },
-    {
-      icon: ShieldCheck,
-      title: t("hero.features.secure"),
-    },
-    {
-      icon: UserCheck,
-      title: t("hero.features.customer"),
-    },
+    { icon: Zap, title: t("hero.features.fast") },
+    { icon: Globe, title: t("hero.features.international") },
+    { icon: ShieldCheck, title: t("hero.features.secure") },
+    { icon: UserCheck, title: t("hero.features.customer") },
   ];
 
   const storySteps = [
@@ -115,12 +73,12 @@ export default function AboutPage() {
       image: "/images/muste-brand.jpg",
     },
     {
-      name: "Sarah Johnson",
+      name: "Sara Tesfaye",
       role: t("team.roles.operations"),
       image: "/images/muste-brand.jpg",
     },
     {
-      name: "David Lee",
+      name: "Dawit Mehari",
       role: t("team.roles.logistics"),
       image: "/images/muste-brand.jpg",
     },
@@ -133,49 +91,6 @@ export default function AboutPage() {
       name: "James Williams",
       role: t("team.roles.customer"),
       image: "/images/muste-brand.jpg",
-    },
-    {
-      name: "Jennifer Davis",
-      role: t("team.roles.manager"),
-      image: "/images/muste-brand.jpg",
-    },
-    {
-      name: "Mustefa Wado",
-      role: t("team.roles.founder"),
-      image: "/images/muste-brand.jpg",
-    },
-  ];
-
-  const workplaceImages = [
-    "/images/Next-Day Delivery.jpg",
-    "/images/Next-Day Delivery.jpg",
-    "/images/Next-Day Delivery.jpg",
-    "/images/Next-Day Delivery.jpg",
-    "/images/Next-Day Delivery.jpg",
-    "/images/Next-Day Delivery.jpg",
-    "/images/Next-Day Delivery.jpg",
-  ];
-
-  const commitments = [
-    {
-      icon: ShieldCheck,
-      title: t("commitment.items.trust.title"),
-      description: t("commitment.items.trust.description"),
-    },
-    {
-      icon: Clock,
-      title: t("commitment.items.reliability.title"),
-      description: t("commitment.items.reliability.description"),
-    },
-    {
-      icon: Users,
-      title: t("commitment.items.care.title"),
-      description: t("commitment.items.care.description"),
-    },
-    {
-      icon: TrendingUp,
-      title: t("commitment.items.growth.title"),
-      description: t("commitment.items.growth.description"),
     },
   ];
 
@@ -190,12 +105,14 @@ export default function AboutPage() {
           scrollbar-width: none;
         }
       `}</style>
+
+      {/* ── HERO ── */}
       <section className="relative overflow-hidden px-4 py-10 sm:px-6 lg:px-12">
         <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-2">
           <div>
             <SectionLabel label={t("hero.label")} />
 
-            <h1 className="mt-4 max-w-xl text-4xl font-black leading-tight tracking-tight text-black sm:text-5xl lg:text-6xl">
+            <h1 className="mt-4 max-w-xl text-4xl font-black leading-tight tracking-tight sm:text-5xl lg:text-6xl">
               {t("hero.titleLine1")}
               <br />
               {t("hero.titleLine2")}
@@ -203,18 +120,18 @@ export default function AboutPage() {
               <span className="text-[#f5b400]">{t("hero.titleHighlight")}</span>
             </h1>
 
-            <p className="mt-6 max-w-xl text-base leading-8 text-gray-600">
+            {/* one-liner punch — no wall of text */}
+            <p className="mt-6 max-w-md text-lg font-medium leading-8 text-gray-500">
               {t("hero.description")}
             </p>
 
-            <div className="mt-7 grid max-w-xl grid-cols-1 gap-4 sm:grid-cols-2">
-              {features.map((item, index) => {
+            <div className="mt-8 grid max-w-xl grid-cols-2 gap-4">
+              {features.map((item, i) => {
                 const Icon = item.icon;
-
                 return (
-                  <div key={index} className="flex items-center gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#fff3c4] text-black">
-                      <Icon size={20} />
+                  <div key={i} className="flex items-center gap-3">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#fff3c4]">
+                      <Icon size={18} />
                     </div>
                     <span className="text-sm font-bold text-gray-800">
                       {item.title}
@@ -225,72 +142,87 @@ export default function AboutPage() {
             </div>
           </div>
 
+          {/* image side — unchanged from your original */}
           <div className="relative">
             <div className="absolute -right-4 -top-4 h-full w-full rounded-[2rem] border-4 border-[#f5b400]" />
-
             <div className="relative overflow-hidden rounded-[2rem]">
               <img
                 src="/images/truck image.png"
                 alt={t("hero.imageAlt")}
                 className="h-[460px] w-full object-cover"
               />
-
               <div className="absolute inset-0 bg-gradient-to-r from-black/10 to-transparent" />
             </div>
 
-            <div className="absolute left-4 top-14 w-[220px] rounded-[2rem] bg-white p-7 text-center shadow-2xl sm:left-[-40px]">
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-black text-[#f5b400]">
-                <Package size={30} />
+            {/* floating mission card */}
+            <div className="absolute left-4 top-14 w-[200px] rounded-[1.5rem] bg-white p-6 text-center shadow-2xl sm:left-[-40px]">
+              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-black text-[#f5b400]">
+                <Package size={26} />
               </div>
-
-              <h3 className="mt-5 text-xl font-black">{t("mission.title")}</h3>
-
-              <p className="mt-4 text-sm leading-7 text-gray-600">
+              <h3 className="mt-4 text-base font-black">
+                {t("mission.title")}
+              </h3>
+              <p className="mt-3 text-xs leading-6 text-gray-500">
                 {t("mission.description")}
               </p>
-
-              <div className="absolute -bottom-6 left-1/2 flex h-12 w-12 -translate-x-1/2 items-center justify-center rounded-full bg-[#f5b400] text-black shadow-lg">
-                <ChevronDown size={22} />
+              <div className="absolute -bottom-5 left-1/2 flex h-10 w-10 -translate-x-1/2 items-center justify-center rounded-full bg-[#f5b400] shadow-lg">
+                <ChevronDown size={18} />
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="px-4 py-16 sm:px-6 lg:px-12">
-        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[300px_1fr]">
-          <div>
-            <SectionLabel label={t("story.label")} />
+      {/* ── STATS ── */}
+      <section className="px-4 py-14 sm:px-6 lg:px-12">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid grid-cols-2 divide-x divide-y divide-gray-100 overflow-hidden rounded-2xl border border-gray-100 md:grid-cols-4 md:divide-y-0">
+            {stats.map((s, i) => {
+              const Icon = s.icon;
+              return (
+                <div key={i} className="flex flex-col items-center gap-2 py-10">
+                  <Icon size={22} className="text-[#f5b400]" />
+                  <p className="text-4xl font-black">{s.number}</p>
+                  <p className="text-xs font-semibold uppercase tracking-wider text-gray-400">
+                    {s.label}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
 
+      {/* ── STORY ── */}
+      <section className="px-4 pb-16 sm:px-6 lg:px-12">
+        <div className="mx-auto max-w-7xl">
+          {/* tight header */}
+          <div className="mb-12 max-w-lg">
+            <SectionLabel label={t("story.label")} />
             <h2 className="mt-4 text-4xl font-black leading-tight">
-              {t("story.titleLine1")}
-              <br />
-              {t("story.titleLine2")}{" "}
+              {t("story.titleLine1")}{" "}
               <span className="text-[#f5b400]">
                 {t("story.titleHighlight")}
               </span>
             </h2>
-
-            <p className="mt-5 text-base leading-8 text-gray-600">
+            <p className="mt-3 text-sm leading-7 text-gray-500">
               {t("story.description")}
             </p>
           </div>
 
+          {/* steps */}
           <div className="relative grid gap-8 md:grid-cols-3">
-            <div className="absolute left-0 top-12 hidden h-[2px] w-full border-t-2 border-dashed border-[#f5b400]/60 md:block" />
-
-            {storySteps.map((step, index) => {
+            <div className="absolute left-0 top-12 hidden h-px w-full border-t-2 border-dashed border-[#f5b400]/50 md:block" />
+            {storySteps.map((step, i) => {
               const Icon = step.icon;
-
               return (
-                <div key={index} className="relative text-center">
-                  <div className="relative z-10 mx-auto flex h-24 w-24 items-center justify-center rounded-full border-4 border-[#f5b400] bg-black text-[#f5b400] shadow-lg">
-                    <Icon size={36} />
+                <div key={i} className="relative text-center">
+                  <div className="relative z-10 mx-auto flex h-24 w-24 items-center justify-center rounded-full border-4 border-[#f5b400] bg-black text-[#f5b400]">
+                    <Icon size={34} />
                   </div>
-
-                  <h3 className="mt-5 text-2xl font-black">{step.number}</h3>
-                  <h4 className="mt-3 text-lg font-black">{step.title}</h4>
-                  <p className="mx-auto mt-3 max-w-xs text-sm leading-7 text-gray-600">
+                  <p className="mt-5 text-2xl font-black">{step.number}</p>
+                  <h4 className="mt-2 text-lg font-black">{step.title}</h4>
+                  <p className="mx-auto mt-2 max-w-xs text-sm leading-7 text-gray-500">
                     {step.description}
                   </p>
                 </div>
@@ -300,116 +232,69 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="px-4 sm:px-6 lg:px-12">
-        <div className="mx-auto max-w-7xl rounded-3xl bg-[#f7edd8] p-6 text-black shadow-2xl lg:p-8">
+      {/* ── TEAM ── */}
+      <section className="px-4 pb-20 sm:px-6 lg:px-12">
+        <div className="mx-auto max-w-7xl rounded-3xl bg-[#f7edd8] p-6 lg:p-8">
           <div className="flex items-start justify-between gap-5">
             <div>
-              <SectionLabel label={t("team.label")} dark />
-
+              <SectionLabel label={t("team.label")} />
               <h2 className="mt-3 text-3xl font-black">{t("team.title")}</h2>
-
-              <p className="mt-2 text-sm text-gray-600">
+              <p className="mt-1 max-w-sm text-sm text-gray-600">
                 {t("team.description")}
               </p>
             </div>
-
             <div className="hidden items-center gap-3 sm:flex">
               <button
                 onClick={() => scrollTeam("left")}
-                className="flex h-12 w-12 items-center justify-center rounded-full border border-white/20 text-black hover:bg-white hover:text-black"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-black/10 hover:bg-white"
               >
-                <ChevronLeft size={20} />
+                <ChevronLeft size={18} />
               </button>
               <button
                 onClick={() => scrollTeam("right")}
-                className="flex h-12 w-12 items-center justify-center rounded-full bg-[#f5b400] text-black hover:bg-white"
+                className="flex h-11 w-11 items-center justify-center rounded-full bg-[#f5b400] hover:opacity-80"
               >
-                <ChevronRight size={20} />
+                <ChevronRight size={18} />
               </button>
             </div>
           </div>
 
           <div
             ref={teamRef}
-            className="mt-7 flex gap-5 overflow-x-auto scrollbar-hide scroll-smooth"
-            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+            className="mt-7 flex gap-4 overflow-x-auto scrollbar-hide scroll-smooth"
           >
-            {team.map((member, index) => (
+            {team.map((member, i) => (
               <div
-                key={index}
-                className="flex-shrink-0 w-48 overflow-hidden rounded-2xl bg-white text-center text-black"
+                key={i}
+                className="w-44 flex-shrink-0 overflow-hidden rounded-2xl bg-white text-center"
               >
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="h-50 w-full object-cover"
+                  className="h-44 w-full object-cover"
                 />
-
                 <div className="p-4">
-                  <h3 className="text-sm font-black">{member.name}</h3>
-                  <p className="mt-1 text-xs font-bold text-[#f5b400]">
+                  <p className="text-sm font-black">{member.name}</p>
+                  <p className="mt-1 text-xs font-semibold text-[#f5b400]">
                     {member.role}
                   </p>
                 </div>
               </div>
             ))}
           </div>
-
-          <div className="mt-5 flex justify-center gap-2">
-            <span className="h-2 w-6 rounded-full bg-[#f5b400]" />
-            <span className="h-2 w-2 rounded-full bg-white/30" />
-            <span className="h-2 w-2 rounded-full bg-white/30" />
-          </div>
         </div>
       </section>
-      {/* 
-      <section className="px-4 py-10 sm:px-6 lg:px-12">
-        <div className="mx-auto max-w-7xl">
-          <SectionLabel label={t("workplace.label")} />
-
-          <div className="relative mt-5">
-            <button
-              onClick={() => scrollWorkplace("left")}
-              className="absolute left-[-18px] top-1/2 z-10 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-lg"
-            >
-              <ChevronLeft size={20} />
-            </button>
-
-            <div
-              ref={workplaceRef}
-              className="flex gap-4 overflow-x-auto scrollbar-hide scroll-smooth"
-              style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-            >
-              {workplaceImages.map((image, index) => (
-                <img
-                  key={index}
-                  src={image}
-                  alt={t("workplace.imageAlt")}
-                  className="flex-shrink-0 h-36 w-48 rounded-2xl object-cover shadow-md"
-                />
-              ))}
-            </div>
-
-            <button
-              onClick={() => scrollWorkplace("right")}
-              className="absolute right-[-18px] top-1/2 z-10 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-lg"
-            >
-              <ChevronRight size={20} />
-            </button>
-          </div>
-        </div>
-      </section> */}
     </main>
   );
 }
 
 function SectionLabel({ label }) {
   return (
-    <div className="flex items-center gap-4">
-      <span className="text-xs font-black uppercase tracking-wide text-[#f5b400]">
+    <div className="flex items-center gap-3">
+      <span className="text-xs font-black uppercase tracking-widest text-[#f5b400]">
         {label}
       </span>
-      <span className="h-[2px] w-10 bg-[#f5b400]" />
+      <span className="h-[2px] w-8 bg-[#f5b400]" />
     </div>
   );
 }

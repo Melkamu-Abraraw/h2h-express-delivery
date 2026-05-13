@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import CoverageArea from "@/components/CoverageArea";
 import TrustedPartners from "@/components/TrustedPartners";
 import FaqSection from "@/components/Faq";
+import WhyChooseUs from "@/components/WhyChooseUs";
 // Pass lang as a prop from your i18n setup
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <ServicesGrid />
       <ServicesSection />
       <Testimonialssection />
+      <WhyChooseUs />
       <CoverageArea />
       <FaqSection />
     </div>

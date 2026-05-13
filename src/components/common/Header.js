@@ -20,7 +20,7 @@ export default function Header() {
   };
 
   return (
-    <header className="w-full bg-white shadow-sm relative">
+    <header className="w-full bg-white shadow-sm sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
         {/* LEFT (Desktop) */}
         <nav className="hidden md:flex flex-1 gap-6 text-sm font-medium text-gray-700">
@@ -70,9 +70,9 @@ export default function Header() {
         {/* CENTER LOGO */}
         {/* CENTER LOGO */}
         {/* CENTER LOGO */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 bottom-0 translate-y-1/2 z-50">
+        <div className="absolute left-1/2 transform -translate-x-1/2 bottom-4 md:bottom-6 translate-y-1/2 z-70">
           <Link href={`/${locale}`}>
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center gap-3 ">
               <Image
                 src="/images/H2H_Logo.png"
                 alt="Logo"
@@ -81,11 +81,11 @@ export default function Header() {
                 loading="eager"
                 className="object-contain w-[60px] h-[60px] md:w-[100px] md:h-[100px]"
               />
-              <div className="flex flex-col items-center leading-tight mt-0.5">
-                <span className="text-[9px] md:text-[11px] font-bold tracking-[2px] text-[#D4860A]">
+              <div className="flex flex-col items-center leading-tight -mt-3">
+                <span className="text-[9px] md:text-[11px] font-bold tracking-[2px] text-black">
                   HAND TO HAND
                 </span>
-                <span className="text-[7px] md:text-[9px] font-medium tracking-[1.5px] text-[#8B5E0A]">
+                <span className="text-[7px] md:text-[9px] font-medium tracking-[1.5px] text-black">
                   EXPRESS DELIVERY
                 </span>
               </div>
