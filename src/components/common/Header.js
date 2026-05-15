@@ -89,6 +89,7 @@ export default function Header() {
       {/* MOBILE MENU */}
       {open && (
         <div className="md:hidden bg-white border-t px-4 py-4 space-y-2 shadow-lg">
+          {/* NAV LINKS */}
           {[
             { name: t("home"), href: "/" },
             { name: t("about"), href: "/about-us" },
@@ -104,6 +105,23 @@ export default function Header() {
               {item.name}
             </Link>
           ))}
+
+          {/* 🔥 LANGUAGE SWITCHER (MOBILE FIX) */}
+          <div className="flex gap-2 pt-4 border-t">
+            {["en", "am", "ti"].map((lng) => (
+              <button
+                key={lng}
+                onClick={() => changeLanguage(lng)}
+                className={`px-3 py-2 text-sm rounded border ${
+                  locale === lng
+                    ? "bg-[rgb(var(--color-brand))] text-white border-[rgb(var(--color-brand))]"
+                    : "text-gray-700"
+                }`}
+              >
+                {lng.toUpperCase()}
+              </button>
+            ))}
+          </div>
         </div>
       )}
     </header>
