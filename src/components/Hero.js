@@ -143,7 +143,7 @@ export default function Hero() {
         }
       `}</style>
 
-      <section className="rounded-2xl overflow-hidden w-full min-h-full max-w-7xl mx-auto px-6 md:px-10 mt-10 md:py-58 flex flex-col md:flex-row items-center justify-between gap-10 relative">
+      <section className="rounded-2xl overflow-hidden w-full min-h-full max-w-7xl mx-auto px-6 md:px-10 mt-10 md:py-26 flex flex-col md:flex-row items-center justify-between gap-10 relative">
         {/* LEFT — Text */}
         <div className="flex-1 max-w-xl z-10">
           <p
