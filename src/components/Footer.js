@@ -36,7 +36,7 @@ export default function Footer() {
         <div>
           <div className="mb-0  h-[140px] ">
             <img
-              src="/images/H2H_logo.png"
+              src="/images/logo_footer.png"
               alt="delivery"
               className="h-[90px] object-contain"
             />

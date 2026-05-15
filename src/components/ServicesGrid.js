@@ -252,7 +252,7 @@ export default function ServicesGrid() {
           <h2 className="text-4xl md:text-6xl font-black text-white uppercase tracking-wide mb-5">
             {t("heading")}
           </h2>
-          <p className="text-white/80 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
+          <p className="text-white/80 text-sm md:text-base max-w-2xl mx-auto mb-8 leading-relaxed">
             {t("subheading")}
           </p>
         </div>

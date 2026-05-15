@@ -15,7 +15,7 @@ export default function WhyChooseUs() {
     <section className="bg-[#0a0a0a] px-6 py-24 md:px-16">
       <div className="mx-auto max-w-6xl">
         {/* Tag */}
-        <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-orange-500/20 bg-orange-500/10 px-3 py-1.5 text-xs font-medium uppercase tracking-widest text-orange-400">
+        <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-text-[rgb(var(--color-brand))] bg-text-[rgb(var(--color-brand))] px-3 py-1.5 text-xs font-medium uppercase tracking-widest text-[rgb(var(--color-brand))]">
           <svg
             className="h-3.5 w-3.5"
             fill="none"
@@ -35,11 +35,13 @@ export default function WhyChooseUs() {
         {/* Headline */}
         <h2 className="max-w-xl text-4xl font-bold leading-tight text-white md:text-5xl">
           {t("headline1")}{" "}
-          <span className="text-orange-500">{t("headline2")}</span>
+          <span className="text-[rgb(var(--color-brand))]">
+            {t("headline2")}
+          </span>
         </h2>
 
         {/* Divider */}
-        <div className="my-6 h-0.5 w-8 rounded-full bg-orange-500" />
+        <div className="my-6 h-0.5 w-8 rounded-full bg-[rgb(var(--color-brand))]" />
 
         {/* Subtext */}
         <p className="mb-14 max-w-md text-sm leading-relaxed text-neutral-500">
@@ -53,10 +55,12 @@ export default function WhyChooseUs() {
               key={i}
               className="bg-[#0f0f0f] p-8 transition-colors duration-200 hover:bg-[#141414]"
             >
-              <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-xl border border-orange-500/30 bg-orange-500/10 text-lg">
+              <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-xl border  border-[rgb(var(--color-brand))] bg-white text-lg">
                 {icons[i]}
               </div>
-              <p className="mb-2 text-sm font-semibold text-white">{f.title}</p>
+              <p className="mb-2 text-sm font-semibold text-[rgb(var(--color-brand))]">
+                {f.title}
+              </p>
               <p className="text-sm leading-relaxed text-neutral-500">
                 {f.description}
               </p>

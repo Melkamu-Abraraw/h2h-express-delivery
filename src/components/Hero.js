@@ -143,7 +143,7 @@ export default function Hero() {
         }
       `}</style>
 
-      <section className="rounded-2xl overflow-hidden max-w-6xl mx-auto px-4 py-20 flex flex-col md:flex-row items-center justify-between gap-4 min-h-[300px] relative">
+      <section className="rounded-2xl overflow-hidden w-full min-h-full max-w-7xl mx-auto px-6 md:px-10 mt-10 md:py-58 flex flex-col md:flex-row items-center justify-between gap-10 relative">
         {/* LEFT — Text */}
         <div className="flex-1 max-w-xl z-10">
           <p
@@ -207,15 +207,14 @@ export default function Hero() {
             ))}
           </div>
         </div>
-
         {/* RIGHT — Illustration */}
         <div
-          className={`hero-fade-right delay-300 relative w-110 md:w-120 h-120 flex-shrink-0 flex items-center justify-center ${loaded ? "visible" : ""}`}
+          className={`hero-fade-right delay-300 py-2 relative w-110 md:w-150 h-120 flex-shrink-0 flex items-center justify-center ${loaded ? "visible" : ""}`}
         >
           <img
-            src="/images/hero-image-2.jpg"
+            src="/images/Home_3.jpg"
             alt="Delivery"
-            className="relative z-10 h-400 object-contain px-2 md:p-0"
+            className="relative z-10 w-full max-w-[850px] object-contain"
           />
         </div>
       </section>

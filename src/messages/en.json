@@ -82,18 +82,6 @@
       {
         "title": "Fast & Secure Fund Return",
         "description": "Payment is made exclusively by bank transfer, guaranteeing the speed and security of transactions."
-      },
-      {
-        "title": "Appropriate Packaging",
-        "description": "We offer an adapted and personalized packaging service to ensure optimal protection of your goods during transport."
-      },
-      {
-        "title": "Package Returns",
-        "description": "We facilitate the return of your packages with a smooth procedure, allowing quick recovery of your goods for immediate resale."
-      },
-      {
-        "title": "Control & Continuous Tracking",
-        "description": "We have created a dedicated delivery application, available on computer and mobile, with an intuitive interface."
       }
     ]
   },
@@ -263,6 +251,94 @@
       }
     ]
   },
+  "about-us": {
+    "badge": "Est. 2018",
+    "hero": {
+      "title_line1": "Delivering Trust",
+      "title_line2": "Beyond Packages.",
+      "subtitle": "H2H Express Delivery connects people and businesses with lightning-fast, door-to-door logistics solutions across the region."
+    },
+    "stats": {
+      "deliveries": "Deliveries",
+      "cities": "Cities Covered",
+      "ontime": "On-Time Rate",
+      "years": "Years of Trust"
+    },
+    "mission": {
+      "label": "Our Mission",
+      "text": "To redefine last-mile delivery by combining cutting-edge technology with human care — ensuring every package arrives safely, swiftly, and with a smile."
+    },
+    "vision": {
+      "label": "Our Vision",
+      "text": "To become the most trusted express delivery network in East Africa, setting the standard for speed, reliability, and customer experience."
+    },
+    "our_story": {
+      "label": "Our Story",
+      "title": "Built With Passion, Driven By Purpose",
+      "paragraph1": "We started with a simple belief — delivery should be fast, reliable, and human-centered. What began as a local logistics initiative has grown into a trusted delivery network serving businesses and communities across the region.",
+      "paragraph2": "Through technology, dedication, and customer trust, we continue to redefine last-mile delivery while maintaining the personal touch that sets us apart."
+    },
+    "values": {
+      "label": "About Us",
+      "heading": "What Drives Us",
+      "items": [
+        {
+          "icon": "⚡",
+          "title": "Speed",
+          "desc": "We move fast so your business never slows down."
+        },
+        {
+          "icon": "🔒",
+          "title": "Trust",
+          "desc": "Every package is handled with full accountability."
+        },
+        {
+          "icon": "🤝",
+          "title": "Partnership",
+          "desc": "We grow when our clients grow — always together."
+        },
+        {
+          "icon": "📍",
+          "title": "Precision",
+          "desc": "Real-time tracking and accurate delivery windows."
+        }
+      ]
+    },
+    "team": {
+      "label": "Our Team",
+      "heading": "The People Behind H2H",
+      "subheading": "A passionate team of logistics experts, tech builders, and service champions.",
+      "members": [
+        {
+          "name": "Abebe Girma",
+          "role": "Founder & CEO",
+          "bio": "15 years in logistics, obsessed with on-time delivery."
+        },
+        {
+          "name": "Sara Tadesse",
+          "role": "Head of Operations",
+          "bio": "Keeps 500+ daily deliveries running like clockwork."
+        },
+        {
+          "name": "Yonas Bekele",
+          "role": "Tech Lead",
+          "bio": "Built our real-time tracking platform from scratch."
+        },
+        {
+          "name": "Meron Haile",
+          "role": "Customer Experience",
+          "bio": "Ensures every interaction leaves a lasting impression."
+        }
+      ]
+    },
+    "cta": {
+      "heading": "Ready to Ship Smarter?",
+      "text": "Join thousands of businesses that trust H2H Express for their critical deliveries.",
+      "primary": "Get Started Today",
+      "secondary": "Contact Us"
+    },
+    "footer": "All rights reserved."
+  },
   "About": {
     "tag": "About us",
     "heroLine1": "Moving things that",
@@ -321,7 +397,7 @@
 
     "express": {
       "title": "Express Delivery",
-      "description": "Need it now? With Eshi Express, you can have your packages delivered in as little as 90 minutes anywhere in Addis Ababa. Whether it's a forgotten document, urgent medicine, or a surprise gift, our team ensures top-notch speed and reliability, so you never have to wait."
+      "description": "Need it now? With H2H Express, you can have your packages delivered in as little as 90 minutes anywhere in Addis Ababa. Whether it's a forgotten document, urgent medicine, or a surprise gift, our team ensures top-notch speed and reliability, so you never have to wait."
     },
 
     "sameDay": {
@@ -336,7 +412,7 @@
 
     "additional": {
       "title": "Additional Services",
-      "description": "Beyond delivery, Eshi Express offers value-added services, including warehousing for lightweight packages, cash-on-collection for online businesses, and insurance coverage for lost or damaged goods. These services ensure convenience and peace of mind."
+      "description": "Beyond delivery, H2H Express offers value-added services, including warehousing for lightweight packages, cash-on-collection for online businesses, and insurance coverage for lost or damaged goods. These services ensure convenience and peace of mind."
     }
   },
   "login": {

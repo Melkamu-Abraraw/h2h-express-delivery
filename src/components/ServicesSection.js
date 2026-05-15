@@ -28,7 +28,7 @@ export default function DeliveryProcess() {
     },
     {
       id: 3,
-      image: "/images/steps/step_3.png",
+      image: "/images/van_1.png",
       title: t("steps.step3.title"),
       desc: t("steps.step3.desc"),
       points: [t("steps.step3.points.0"), t("steps.step3.points.1")],

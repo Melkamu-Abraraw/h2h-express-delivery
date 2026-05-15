@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 
 export default function ServicesPage() {
   const t = useTranslations("Services");
+  const t1 = useTranslations("about-us");
 
   // Reusable animation variants
   const fadeUp = {
@@ -44,7 +45,7 @@ export default function ServicesPage() {
         viewport={{ once: true }}
         variants={fadeUp}
       >
-        <h1 className="text-4xl md:text-5xl font-extrabold">
+        <h1 className="text-2xl md:text-5xl font-extrabold">
           {t("heading")} <br /> {t("highlight")}
         </h1>
       </motion.div>
@@ -70,10 +71,7 @@ export default function ServicesPage() {
           viewport={{ once: true }}
           variants={fadeRight}
         >
-          <img
-            src="/images/service_1.png"
-            className="w-full max-w-full h-auto"
-          />
+          <img src="/images/van_3.png" className="w-full max-w-full h-auto" />
         </motion.div>
       </div>
 
@@ -127,10 +125,7 @@ export default function ServicesPage() {
           viewport={{ once: true }}
           variants={fadeRight}
         >
-          <img
-            src="/images/service_3.png"
-            className="w-full max-w-full h-auto"
-          />
+          <img src="/images/van_4.png" className="w-full max-w-full h-auto" />
         </motion.div>
       </div>
 
@@ -162,6 +157,33 @@ export default function ServicesPage() {
           </p>
         </motion.div>
       </div>
+      <section className="bg-white px-5 py-20">
+        <div className="max-w-4xl mx-auto rounded-3xl border border-yellow-200 bg-yellow-50/40 p-12 md:p-16 text-center">
+          <h2
+            className="font-black text-gray-900 mb-4"
+            style={{
+              fontSize: "clamp(1.8rem,4vw,3rem)",
+              letterSpacing: "-0.02em",
+            }}
+          >
+            {t1("cta.heading")}
+          </h2>
+
+          <p className="text-gray-500 text-base md:text-lg max-w-xl mx-auto mb-10">
+            {t1("cta.text")}
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <button className="brand-bg text-white font-bold text-sm px-8 py-4 rounded-xl hover:scale-105 transition-all">
+              {t1("cta.primary")}
+            </button>
+
+            <button className="text-gray-700 font-bold text-sm px-8 py-4 rounded-xl border-2 border-gray-200 hover:border-yellow-300 transition-all">
+              {t1("cta.secondary")}
+            </button>
+          </div>
+        </div>
+      </section>
     </section>
   );
 }

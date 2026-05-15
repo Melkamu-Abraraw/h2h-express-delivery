@@ -1,282 +1,352 @@
 "use client";
 
-import { useTranslations, useLocale } from "next-intl";
-import { useRef } from "react";
-import {
-  Package,
-  ShieldCheck,
-  Globe,
-  Users,
-  Zap,
-  UserCheck,
-  Clock,
-  TrendingUp,
-  Flag,
-  Rocket,
-  ChevronDown,
-  ChevronLeft,
-  ChevronRight,
-} from "lucide-react";
+import { useTranslations } from "next-intl";
 
-export default function AboutPage() {
-  const t = useTranslations("about");
-  const teamRef = useRef(null);
+// ─── Stats ────────────────────────────────────────────────────────────────────
+const STATS_KEYS = [
+  { value: "10K+", key: "deliveries" },
+  { value: "50+", key: "cities" },
+  { value: "98%", key: "ontime" },
+  { value: "6+", key: "years" },
+];
 
-  const scrollTeam = (direction) => {
-    if (teamRef.current) {
-      teamRef.current.scrollBy({
-        left: direction === "left" ? -300 : 300,
-        behavior: "smooth",
-      });
-    }
-  };
+export default function AboutUs() {
+  const t = useTranslations("about-us");
 
-  const stats = [
-    { icon: Package, number: "10K+", label: t("stats.packages.label") },
-    { icon: Users, number: "5K+", label: t("stats.customers.label") },
-    { icon: Globe, number: "20+", label: t("stats.countries.label") },
-    { icon: ShieldCheck, number: "98%", label: t("stats.delivery.label") },
-  ];
-
-  const features = [
-    { icon: Zap, title: t("hero.features.fast") },
-    { icon: Globe, title: t("hero.features.international") },
-    { icon: ShieldCheck, title: t("hero.features.secure") },
-    { icon: UserCheck, title: t("hero.features.customer") },
-  ];
-
-  const storySteps = [
+  const values = [
     {
-      icon: Flag,
-      number: "01",
-      title: t("story.steps.beginning.title"),
-      description: t("story.steps.beginning.description"),
+      icon: "⚡",
+      title: t("values.items.0.title"),
+      desc: t("values.items.0.desc"),
     },
     {
-      icon: Users,
-      number: "02",
-      title: t("story.steps.growing.title"),
-      description: t("story.steps.growing.description"),
+      icon: "🔒",
+      title: t("values.items.1.title"),
+      desc: t("values.items.1.desc"),
     },
     {
-      icon: Rocket,
-      number: "03",
-      title: t("story.steps.future.title"),
-      description: t("story.steps.future.description"),
+      icon: "🤝",
+      title: t("values.items.2.title"),
+      desc: t("values.items.2.desc"),
+    },
+    {
+      icon: "📍",
+      title: t("values.items.3.title"),
+      desc: t("values.items.3.desc"),
     },
   ];
 
-  const team = [
+  const members = [
     {
-      name: "Mustefa Wado",
-      role: t("team.roles.founder"),
+      name: t("team.members.0.name"),
+      role: t("team.members.0.role"),
+      bio: t("team.members.0.bio"),
       image: "/images/muste-brand.jpg",
     },
     {
-      name: "Sara Tesfaye",
-      role: t("team.roles.operations"),
+      name: t("team.members.1.name"),
+      role: t("team.members.1.role"),
+      bio: t("team.members.1.bio"),
       image: "/images/muste-brand.jpg",
     },
     {
-      name: "Dawit Mehari",
-      role: t("team.roles.logistics"),
+      name: t("team.members.2.name"),
+      role: t("team.members.2.role"),
+      bio: t("team.members.2.bio"),
       image: "/images/muste-brand.jpg",
     },
     {
-      name: "Emily Chen",
-      role: t("team.roles.marketing"),
-      image: "/images/muste-brand.jpg",
-    },
-    {
-      name: "James Williams",
-      role: t("team.roles.customer"),
+      name: t("team.members.3.name"),
+      role: t("team.members.3.role"),
+      bio: t("team.members.3.bio"),
       image: "/images/muste-brand.jpg",
     },
   ];
 
   return (
-    <main className="min-h-screen bg-white text-[#111111]">
-      <style jsx>{`
-        .scrollbar-hide::-webkit-scrollbar {
-          display: none;
+    <div
+      className="min-h-screen bg-white text-gray-900"
+      style={{ fontFamily: "'Plus Jakarta Sans', 'Segoe UI', sans-serif" }}
+    >
+      {/* Styles */}
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap');
+
+        :root {
+          --color-brand: 249 192 60;
         }
-        .scrollbar-hide {
-          -ms-overflow-style: none;
-          scrollbar-width: none;
+
+        .brand-bg {
+          background-color: rgb(var(--color-brand));
+        }
+
+        .brand-text {
+          color: rgb(var(--color-brand));
+        }
+
+        .hero-dots {
+          background-color: #fff;
+          background-image: radial-gradient(
+            rgba(249,192,60,0.15) 1.5px,
+            transparent 1.5px
+          );
+          background-size: 28px 28px;
+        }
+
+        .h2h-card {
+          border: 1.5px solid #efefef;
+          transition:
+            transform 0.25s ease,
+            box-shadow 0.25s ease,
+            border-color 0.25s ease;
+        }
+
+        .h2h-card:hover {
+          transform: translateY(-5px);
+          border-color: rgb(var(--color-brand));
+          box-shadow: 0 18px 44px rgba(249,192,60,0.16);
+        }
+
+        .stat-num {
+          font-size: clamp(2.2rem, 5vw, 3.5rem);
+          font-weight: 900;
+          line-height: 1;
+          color: rgb(var(--color-brand));
+        }
+
+        .section-label {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          font-size: 0.7rem;
+          font-weight: 800;
+          text-transform: uppercase;
+          letter-spacing: 0.15em;
+          color: rgb(var(--color-brand));
+          margin-bottom: 10px;
+        }
+
+        .section-label::before {
+          content: '';
+          width: 22px;
+          height: 2px;
+          border-radius: 999px;
+          background: rgb(var(--color-brand));
+        }
+
+        @keyframes fadeUp {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .fade-up {
+          animation: fadeUp 0.7s ease both;
         }
       `}</style>
 
-      {/* ── HERO ── */}
-      <section className="relative overflow-hidden px-4 py-10 sm:px-6 lg:px-12">
-        <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-2">
-          <div>
-            <SectionLabel label={t("hero.label")} />
+      {/* HERO */}
+      <section
+        className="relative w-full min-h-px py-28 bg-cover bg-center bg-no-repeat flex items-center"
+        style={{
+          backgroundImage: "url('/images/about_us_banner.png')",
+        }}
+      >
+        {/* overlay */}
+        <div className="absolute inset-0 bg-black/50"></div>
 
-            <h1 className="mt-4 max-w-xl text-4xl font-black leading-tight tracking-tight sm:text-5xl lg:text-6xl">
-              {t("hero.titleLine1")}
-              <br />
-              {t("hero.titleLine2")}
-              <br />
-              <span className="text-[#f5b400]">{t("hero.titleHighlight")}</span>
+        {/* content container */}
+        <div className="relative z-10 w-full">
+          <div className="max-w-6xl mx-auto px-5">
+            <h1
+              className="fade-up font-black leading-none mb-6 max-w-3xl text-white"
+              style={{
+                fontSize: "clamp(2rem,6vw,4.5rem)",
+                letterSpacing: "-0.01em",
+              }}
+            >
+              <span className="block">{t("hero.title_line1")}</span>
+
+              <span className="block brand-text">{t("hero.title_line2")}</span>
             </h1>
 
-            {/* one-liner punch — no wall of text */}
-            <p className="mt-6 max-w-md text-lg font-medium leading-8 text-gray-500">
-              {t("hero.description")}
+            <p className="fade-up text-gray-200 text-lg md:text-xl max-w-xl leading-relaxed">
+              {t("hero.subtitle")}
             </p>
+          </div>
+        </div>
+      </section>
+      {/* STATS */}
+      <section className="bg-white px-5 py-16">
+        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
+          {STATS_KEYS.map(({ value, key }) => (
+            <div
+              key={key}
+              className="h2h-card rounded-2xl px-6 py-8 text-center bg-white"
+            >
+              <div className="stat-num mb-1">{value}</div>
 
-            <div className="mt-8 grid max-w-xl grid-cols-2 gap-4">
-              {features.map((item, i) => {
-                const Icon = item.icon;
-                return (
-                  <div key={i} className="flex items-center gap-3">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#fff3c4]">
-                      <Icon size={18} />
-                    </div>
-                    <span className="text-sm font-bold text-gray-800">
-                      {item.title}
-                    </span>
-                  </div>
-                );
-              })}
+              <div className="text-gray-400 text-xs font-semibold uppercase tracking-wider">
+                {t(`stats.${key}`)}
+              </div>
             </div>
+          ))}
+        </div>
+      </section>
+
+      {/* MISSION & VISION */}
+      <section className="bg-gray-50 px-5 py-20">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-5">
+          <div className="h2h-card rounded-3xl p-8 bg-white relative overflow-hidden">
+            <div className="text-3xl mb-5">🎯</div>
+
+            <div className="section-label">{t("mission.label")}</div>
+
+            <p className="text-gray-600 leading-relaxed text-[15px]">
+              {t("mission.text")}
+            </p>
           </div>
 
-          {/* image side — unchanged from your original */}
-          <div className="relative">
-            <div className="absolute -right-4 -top-4 h-full w-full rounded-[2rem] border-4 border-[#f5b400]" />
-            <div className="relative overflow-hidden rounded-[2rem]">
-              <img
-                src="/images/truck image.png"
-                alt={t("hero.imageAlt")}
-                className="h-[460px] w-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-black/10 to-transparent" />
-            </div>
+          <div className="h2h-card rounded-3xl p-8 bg-white relative overflow-hidden">
+            <div className="text-3xl mb-5">🌍</div>
 
-            {/* floating mission card */}
-            <div className="absolute left-4 top-14 w-[200px] rounded-[1.5rem] bg-white p-6 text-center shadow-2xl sm:left-[-40px]">
-              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-black text-[#f5b400]">
-                <Package size={26} />
-              </div>
-              <h3 className="mt-4 text-base font-black">
-                {t("mission.title")}
-              </h3>
-              <p className="mt-3 text-xs leading-6 text-gray-500">
-                {t("mission.description")}
-              </p>
-              <div className="absolute -bottom-5 left-1/2 flex h-10 w-10 -translate-x-1/2 items-center justify-center rounded-full bg-[#f5b400] shadow-lg">
-                <ChevronDown size={18} />
-              </div>
-            </div>
+            <div className="section-label">{t("vision.label")}</div>
+
+            <p className="text-gray-600 leading-relaxed text-[15px]">
+              {t("vision.text")}
+            </p>
           </div>
         </div>
       </section>
 
-      {/* ── STATS ── */}
-      <section className="px-4 py-14 sm:px-6 lg:px-12">
-        <div className="mx-auto max-w-7xl">
-          <div className="grid grid-cols-2 divide-x divide-y divide-gray-100 overflow-hidden rounded-2xl border border-gray-100 md:grid-cols-4 md:divide-y-0">
-            {stats.map((s, i) => {
-              const Icon = s.icon;
-              return (
-                <div key={i} className="flex flex-col items-center gap-2 py-10">
-                  <Icon size={22} className="text-[#f5b400]" />
-                  <p className="text-4xl font-black">{s.number}</p>
-                  <p className="text-xs font-semibold uppercase tracking-wider text-gray-400">
-                    {s.label}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+      {/* VALUES */}
+      <section className="bg-white px-5 py-20">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <div className="section-label mx-auto justify-center">
+              {t("values.label")}
+            </div>
 
-      {/* ── STORY ── */}
-      <section className="px-4 pb-16 sm:px-6 lg:px-12">
-        <div className="mx-auto max-w-7xl">
-          {/* tight header */}
-          <div className="mb-12 max-w-lg">
-            <SectionLabel label={t("story.label")} />
-            <h2 className="mt-4 text-4xl font-black leading-tight">
-              {t("story.titleLine1")}{" "}
-              <span className="text-[#f5b400]">
-                {t("story.titleHighlight")}
-              </span>
+            <h2
+              className="font-black text-gray-900"
+              style={{
+                fontSize: "clamp(2rem,5vw,3.2rem)",
+                letterSpacing: "-0.02em",
+              }}
+            >
+              {t("values.heading")}
             </h2>
-            <p className="mt-3 text-sm leading-7 text-gray-500">
-              {t("story.description")}
-            </p>
           </div>
 
-          {/* steps */}
-          <div className="relative grid gap-8 md:grid-cols-3">
-            <div className="absolute left-0 top-12 hidden h-px w-full border-t-2 border-dashed border-[#f5b400]/50 md:block" />
-            {storySteps.map((step, i) => {
-              const Icon = step.icon;
-              return (
-                <div key={i} className="relative text-center">
-                  <div className="relative z-10 mx-auto flex h-24 w-24 items-center justify-center rounded-full border-4 border-[#f5b400] bg-black text-[#f5b400]">
-                    <Icon size={34} />
-                  </div>
-                  <p className="mt-5 text-2xl font-black">{step.number}</p>
-                  <h4 className="mt-2 text-lg font-black">{step.title}</h4>
-                  <p className="mx-auto mt-2 max-w-xs text-sm leading-7 text-gray-500">
-                    {step.description}
-                  </p>
-                </div>
-              );
-            })}
+          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
+            {values.map((v, i) => (
+              <div key={i} className="h2h-card rounded-2xl p-6 bg-white">
+                <div className="text-3xl mb-4">{v.icon}</div>
+
+                <h3 className="font-bold text-gray-900 text-base mb-2">
+                  {v.title}
+                </h3>
+
+                <p className="text-gray-500 text-sm leading-relaxed">
+                  {v.desc}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
-
-      {/* ── TEAM ── */}
-      <section className="px-4 pb-20 sm:px-6 lg:px-12">
-        <div className="mx-auto max-w-7xl rounded-3xl bg-[#f7edd8] p-6 lg:p-8">
-          <div className="flex items-start justify-between gap-5">
+      <section className="py-20 bg-[#f7f7f7]">
+        <div className="max-w-7xl mx-auto px-5">
+          <div className="grid lg:grid-cols-2 gap-12 items-center bg-white rounded-[32px] p-8 md:p-14 shadow-sm border border-gray-100">
+            {/* LEFT CONTENT */}
             <div>
-              <SectionLabel label={t("team.label")} />
-              <h2 className="mt-3 text-3xl font-black">{t("team.title")}</h2>
-              <p className="mt-1 max-w-sm text-sm text-gray-600">
-                {t("team.description")}
+              <div className="inline-flex items-center gap-3 mb-6">
+                <span className="w-10 h-[2px] bg-yellow-500"></span>
+
+                <span className="uppercase tracking-[0.2em] text-sm font-bold text-yellow-500">
+                  {t("our_story.label")}
+                </span>
+              </div>
+
+              <h2 className="text-4xl md:text-5xl font-black text-gray-900 leading-tight mb-6">
+                {t("our_story.title")}
+              </h2>
+
+              <p className="text-gray-600 text-lg leading-relaxed mb-5">
+                {t("our_story.paragraph1")}
+              </p>
+
+              <p className="text-gray-600 text-lg leading-relaxed">
+                {t("our_story.paragraph2")}
               </p>
             </div>
-            <div className="hidden items-center gap-3 sm:flex">
-              <button
-                onClick={() => scrollTeam("left")}
-                className="flex h-11 w-11 items-center justify-center rounded-full border border-black/10 hover:bg-white"
-              >
-                <ChevronLeft size={18} />
-              </button>
-              <button
-                onClick={() => scrollTeam("right")}
-                className="flex h-11 w-11 items-center justify-center rounded-full bg-[#f5b400] hover:opacity-80"
-              >
-                <ChevronRight size={18} />
-              </button>
+
+            {/* RIGHT IMAGE */}
+            <div className="relative">
+              <div className="absolute -inset-4 bg-yellow-400/20 rounded-[30px] blur-2xl"></div>
+
+              <img
+                src="/images/our-story.png"
+                alt="Company Story"
+                className="relative w-full h-[500px] object-cover rounded-[28px]"
+              />
             </div>
           </div>
+        </div>
+      </section>
+      {/* TEAM */}
+      <section className="bg-gray-50 px-5 py-20">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <div className="section-label mx-auto justify-center">
+              {t("team.label")}
+            </div>
 
-          <div
-            ref={teamRef}
-            className="mt-7 flex gap-4 overflow-x-auto scrollbar-hide scroll-smooth"
-          >
-            {team.map((member, i) => (
+            <h2
+              className="font-black text-gray-900 mb-3"
+              style={{
+                fontSize: "clamp(2rem,5vw,3.2rem)",
+                letterSpacing: "-0.02em",
+              }}
+            >
+              {t("team.heading")}
+            </h2>
+
+            <p className="text-gray-400 text-base max-w-xl mx-auto">
+              {t("team.subheading")}
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 gap-4">
+            {members.map((m, i) => (
               <div
                 key={i}
-                className="w-44 flex-shrink-0 overflow-hidden rounded-2xl bg-white text-center"
+                className="h2h-card rounded-2xl p-6 bg-white flex items-start gap-4"
               >
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="h-44 w-full object-cover"
-                />
-                <div className="p-4">
-                  <p className="text-sm font-black">{member.name}</p>
-                  <p className="mt-1 text-xs font-semibold text-[#f5b400]">
-                    {member.role}
+                <div className="w-12 h-12 rounded-full overflow-hidden">
+                  <img
+                    src={m.image}
+                    alt={m.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+
+                <div>
+                  <div className="font-bold text-gray-900 text-base">
+                    {m.name}
+                  </div>
+
+                  <div className="brand-text text-xs font-bold mb-1 uppercase tracking-wide">
+                    {m.role}
+                  </div>
+
+                  <p className="text-gray-500 text-sm leading-relaxed">
+                    {m.bio}
                   </p>
                 </div>
               </div>
@@ -284,17 +354,35 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-    </main>
-  );
-}
 
-function SectionLabel({ label }) {
-  return (
-    <div className="flex items-center gap-3">
-      <span className="text-xs font-black uppercase tracking-widest text-[#f5b400]">
-        {label}
-      </span>
-      <span className="h-[2px] w-8 bg-[#f5b400]" />
+      {/* CTA */}
+      <section className="bg-white px-5 py-20">
+        <div className="max-w-4xl mx-auto rounded-3xl border border-yellow-200 bg-yellow-50/40 p-12 md:p-16 text-center">
+          <h2
+            className="font-black text-gray-900 mb-4"
+            style={{
+              fontSize: "clamp(1.8rem,4vw,3rem)",
+              letterSpacing: "-0.02em",
+            }}
+          >
+            {t("cta.heading")}
+          </h2>
+
+          <p className="text-gray-500 text-base md:text-lg max-w-xl mx-auto mb-10">
+            {t("cta.text")}
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <button className="brand-bg text-white font-bold text-sm px-8 py-4 rounded-xl hover:scale-105 transition-all">
+              {t("cta.primary")}
+            </button>
+
+            <button className="text-gray-700 font-bold text-sm px-8 py-4 rounded-xl border-2 border-gray-200 hover:border-yellow-300 transition-all">
+              {t("cta.secondary")}
+            </button>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

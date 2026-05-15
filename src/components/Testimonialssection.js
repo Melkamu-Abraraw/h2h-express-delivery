@@ -225,7 +225,7 @@ export default function TestimonialsSection() {
           transition: "opacity 0.7s ease, transform 0.7s ease",
         }}
       >
-        <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[rgb(var(--color-brand-light))]/20 text-[rgb(var(--color-brand-dark))] text-xs font-bold tracking-widest uppercase mb-5 shadow-sm">
+        <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#f4f6fb] text-[rgb(var(--color-brand-dark))] text-xs font-bold tracking-widest uppercase mb-5 shadow-sm">
           <span className="w-1.5 h-1.5 rounded-full bg-[rgb(var(--color-brand))] animate-pulse" />
           {t("badge")}
         </span>

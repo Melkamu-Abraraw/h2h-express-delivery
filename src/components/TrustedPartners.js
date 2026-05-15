@@ -15,7 +15,7 @@ export default function TrustedPartners() {
   const t = useTranslations("trustedPartners");
 
   return (
-    <section className="w-full py-14 bg-white overflow-hidden">
+    <section className="w-full  bg-white overflow-hidden">
       <style>{`
         @keyframes marquee {
           0%   { transform: translateX(0); }
