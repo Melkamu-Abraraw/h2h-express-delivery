@@ -4,6 +4,7 @@ import { useTranslations, useLocale } from "next-intl";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
 import { FaTiktok } from "react-icons/fa";
+import Link from "next/link";
 
 export default function Footer() {
   const t = useTranslations("footer");
@@ -34,10 +35,10 @@ export default function Footer() {
       <div className="relative max-w-6xl mx-auto px-6 pt-18 pb-5 grid md:grid-cols-4 gap-10">
         {/* Column 1 */}
         <div>
-          <div className="mb-0  h-[140px] ">
+          <div className="mb-0 h-[140px]">
             <img
               src="/images/logo_footer.png"
-              alt="delivery"
+              alt="logo"
               className="h-[90px] object-contain"
             />
           </div>
@@ -67,14 +68,16 @@ export default function Footer() {
             >
               <FaFacebook size={16} />
             </a>
+
             <a
-              href="https://linkedin.com"
+              href="https://tiktok.com"
               target="_blank"
               rel="noopener noreferrer"
               className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/40 transition"
             >
               <FaTiktok size={16} />
             </a>
+
             <a
               href="https://instagram.com"
               target="_blank"
@@ -86,29 +89,52 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Column 2 */}
+        {/* Column 2 - Quick Links */}
         <div>
           <h4 className="font-semibold mb-4">{t("quickLinks")}</h4>
           <ul className="space-y-2 text-sm opacity-90">
-            <li>{t("links.home")}</li>
-            <li>{t("links.services")}</li>
-            <li>{t("links.about")}</li>
-            <li>{t("links.contact")}</li>
+            <li>
+              <Link href="/" className="hover:underline">
+                {t("links.home")}
+              </Link>
+            </li>
+            <li>
+              <Link href={`/${locale}/services`} className="hover:underline">
+                {t("links.services")}
+              </Link>
+            </li>
+            <li>
+              <Link href={`/${locale}/about-us`} className="hover:underline">
+                {t("links.about")}
+              </Link>
+            </li>
+            <li>
+              <Link href={`/${locale}/contact-us`} className="hover:underline">
+                {t("links.contact")}
+              </Link>
+            </li>
           </ul>
         </div>
 
-        {/* Column 3 */}
+        {/* Column 3 - Contact */}
         <div>
           <h4 className="font-semibold mb-4">{t("contactUs")}</h4>
           <ul className="space-y-2 text-sm opacity-90">
-            <li>{t("links.email")}</li>
-            <li>{t("links.careers")}</li>
-            <li>{t("links.help")}</li>
-            <li>{t("links.contact")}</li>
+            <li>
+              <a href="mailto:info@h2hexpress.com" className="hover:underline">
+                {t("links.email")}
+              </a>
+            </li>
+
+            <li>
+              <Link href={`/${locale}/contact-us`} className="hover:underline">
+                {t("links.contact")}
+              </Link>
+            </li>
           </ul>
         </div>
 
-        {/* Column 4 - About Company */}
+        {/* Column 4 */}
         <div>
           <h4 className="font-semibold mb-4">{t("aboutCompany")}</h4>
           <p className="text-sm opacity-90 mb-4">{t("companyDescription")}</p>
@@ -117,20 +143,20 @@ export default function Footer() {
 
       {/* ── Bottom Section ── */}
       <div className="relative border-t border-white/20 px-6 py-6">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row  md:px-4 justify-between items-center text-sm opacity-85">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row md:px-4 justify-between items-center text-sm opacity-85">
           <p>{t("allRightsReserved", { year: currentYear })}</p>
+
           <div className="flex gap-6">
-            <a href="#" className="hover:opacity-100 transition">
+            <Link href="#" className="hover:opacity-100 transition">
               {t("privacyPolicy")}
-            </a>
-            <a href="#" className="hover:opacity-100 transition">
+            </Link>
+
+            <Link href="#" className="hover:opacity-100 transition">
               {t("termsOfService")}
-            </a>
+            </Link>
           </div>
         </div>
       </div>
-
-      {/* ── Right Image ── */}
     </footer>
   );
 }

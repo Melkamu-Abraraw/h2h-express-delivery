@@ -148,59 +148,35 @@
       { "value": "4.9★", "label": "Average Rating" }
     ],
     "featured": {
-      "name": "Karim Benali",
-      "role": "Founder, ShopDZ",
+      "name": "Mustefa Wado",
+      "role": "Founder, WadoTax",
       "stars": 5,
-      "text": "H2H Express completely transformed our logistics. Our delivery rate jumped to 96% and customer complaints dropped dramatically. Their team is responsive and genuinely cares about results."
+      "text": "Great experience with Hand to Hand Express  Reliable, professional, and excellent customer service. My parcel arrived safely and on time."
     },
     "items": [
       {
-        "name": "Sara Moussaoui",
-        "role": "E-commerce Manager",
-        "stars": 5,
-        "text": "Fast, reliable, and the notification system keeps our customers happy. We've seen a 30% reduction in support tickets since switching."
-      },
-      {
-        "name": "Youssef El Fassi",
+        "name": "Melkamu Abraraw",
         "role": "Online Retailer",
         "stars": 5,
-        "text": "The fund return process is seamless. Bank transfers arrive within 48 hours — that kind of reliability is rare in this market."
+        "text": "I’ve used Hand to Hand Express multiple times and they never disappoint. Deliveries are always on time and packages arrive in perfect condition. Highly recommended for anyone who needs fast and reliable delivery in the city."
       },
       {
-        "name": "Nadia Tazi",
+        "name": "Mentesnot Zewude",
         "role": "Brand Owner",
+        "stars": 5,
+        "text": "Great express delivery service at a reasonable price. I like how efficient they are even during busy days. Definitely my go-to delivery service now."
+      },
+      {
+        "name": "Aman Niguse",
+        "role": "Business Owner",
         "stars": 4,
         "text": "Professional drivers who treat packages with care. Our fragile goods have never arrived damaged. Very impressed."
       },
       {
-        "name": "Omar Cherkaoui",
-        "role": "Dropshipper",
-        "stars": 5,
-        "text": "The dedicated account manager model is brilliant. Having one person who knows my business makes everything smoother."
-      },
-      {
-        "name": "Leila Hamidi",
-        "role": "Boutique Owner",
-        "stars": 5,
-        "text": "Daily pickup from my supplier saves me hours every week. The tracking app is clean and easy to use for both me and my customers."
-      },
-      {
-        "name": "Mehdi Raji",
-        "role": "Tech Products Seller",
+        "name": "Ephrem Adane",
+        "role": "Online Retailer",
         "stars": 4,
-        "text": "Great call center team. They handle customer questions professionally and it shows in our reviews — customers feel cared for."
-      },
-      {
-        "name": "Amina Slaoui",
-        "role": "Fashion Retailer",
-        "stars": 5,
-        "text": "The packaging service is a game changer for our brand image. Products arrive looking premium. Customers notice and appreciate it."
-      },
-      {
-        "name": "Hassan Ouali",
-        "role": "General Merchant",
-        "stars": 5,
-        "text": "Switched from another carrier 6 months ago and haven't looked back. Better rates, better service, better communication."
+        "text": "Professional drivers who treat packages with care. Our fragile goods have never arrived damaged. Very impressed.Great express delivery service at a reasonable price. I like how efficient they are even during busy days. Definitely my go-to delivery service now."
       }
     ]
   },
@@ -576,6 +552,63 @@
       "a2": "We provide several shipping options including standard, expedited, and express services.",
       "a3": "Absolutely. Once your order is shipped, you will receive a tracking number via email.",
       "a4": "Delivery times vary depending on the shipping method and destination."
+    }
+  },
+
+  "Contact": {
+    "heading": "Contact Us",
+    "subheading": "We'd love to hear from you.",
+
+    "phone": {
+      "label": "Phone",
+      "value": "+251 900 000 000"
+    },
+
+    "email": {
+      "label": "Email",
+      "value": "hello@example.com"
+    },
+
+    "address": {
+      "label": "Address",
+      "value": "Addis Ababa, Ethiopia"
+    },
+
+    "whatsapp": {
+      "label": "Chat with us on WhatsApp",
+      "number": "251900000000",
+      "cta": "Message"
+    },
+
+    "map": {
+      "title": "Our Location",
+      "subtitle": "Visit our office anytime during working hours."
+    },
+
+    "form": {
+      "name": "Full Name",
+      "namePlaceholder": "Enter your name",
+
+      "phone": "Phone Number",
+      "phonePlaceholder": "Enter your phone number",
+
+      "email": "Email Address",
+      "emailPlaceholder": "Enter your email",
+
+      "subject": "Subject",
+      "service": "Service",
+
+      "selectPlaceholder": "Select option",
+
+      "subjectOptions": ["General Inquiry", "Support", "Partnership"],
+
+      "serviceOptions": ["Web Development", "UI/UX Design", "SEO"],
+
+      "message": "Message",
+      "messagePlaceholder": "Write your message here...",
+
+      "submit": "Send Message",
+      "sent": "Message Sent"
     }
   }
 }

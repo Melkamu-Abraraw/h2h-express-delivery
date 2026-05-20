@@ -49,7 +49,7 @@ export default function Header() {
         <div className="absolute left-1/2 -translate-x-1/2 flex items-center">
           <Link href={`/${locale}`}>
             <Image
-              src="/images/Logo_Header.png"
+              src="/images/hand-to-hand-balck.png"
               alt="Logo"
               width={75}
               height={75}
