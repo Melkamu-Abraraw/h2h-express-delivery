@@ -70,7 +70,7 @@ export default function Footer() {
             </a>
 
             <a
-              href="https://tiktok.com"
+              href="https://www.tiktok.com/@handtohandexpress2"
               target="_blank"
               rel="noopener noreferrer"
               className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/40 transition"

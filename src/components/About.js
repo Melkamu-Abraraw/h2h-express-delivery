@@ -291,9 +291,9 @@ export default function AboutUs() {
               <div className="absolute -inset-4 bg-yellow-400/20 rounded-[30px] blur-2xl"></div>
 
               <img
-                src="/images/our-story.png"
+                src="/images/h2h2.jpg"
                 alt="Company Story"
-                className="relative w-full h-[500px] object-cover rounded-[28px]"
+                className="relative w-full h-[600px] object-cover rounded-[28px]"
               />
             </div>
           </div>

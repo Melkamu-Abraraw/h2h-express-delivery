@@ -85,7 +85,7 @@ export default function ServicesPage() {
           variants={fadeLeft}
         >
           <img
-            src="/images/service_2.png"
+            src="/images/service_step_2.jpg"
             className="w-full max-w-full h-auto"
           />
         </motion.div>
@@ -125,7 +125,10 @@ export default function ServicesPage() {
           viewport={{ once: true }}
           variants={fadeRight}
         >
-          <img src="/images/van_4.png" className="w-full max-w-full h-auto" />
+          <img
+            src="/images/service_step_4.jpg"
+            className="w-full max-w-full h-auto"
+          />
         </motion.div>
       </div>
 
@@ -139,7 +142,7 @@ export default function ServicesPage() {
           variants={fadeLeft}
         >
           <img
-            src="/images/service_4.png"
+            src="/images/service_step_final.jpg"
             className="w-full max-w-full h-auto"
           />
         </motion.div>

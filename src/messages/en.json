@@ -60,21 +60,22 @@
     "subheading": "We do more than deliver your packages — we create value. By adapting our services to your specific needs, we let you focus on your core business while we manage the entire logistics chain.",
     "items": [
       {
-        "title": "Daily Pickup",
-        "description": "Collection can be made from your premises or directly from your supplier."
+        "title": "Express Delivery",
+        "description": "Fast and trusted delivery services connecting Ethiopia and Canada. Ship with confidence through H2H Express."
       },
       {
-        "title": "Package Storage",
-        "description": "We also offer the possibility of storing cancelled or returned packages for re-shipment to other clients."
+        "title": "Same-Day Delivery",
+        "description": "From urgent documents to valuable parcels, H2H Express delivers quickly, securely, and reliably across Ethiopia and Canada. "
+      },
+      {
+        "title": "Next-Day Delivery",
+        "description": "We deliver your packages efficiently and securely, offering dependable service at competitive rates."
       },
       {
         "title": "Efficient Call Center",
         "description": "To ensure client satisfaction and reduce returns, our call center responds efficiently to their expectations and questions."
       },
-      {
-        "title": "Dedicated Contact",
-        "description": "Each e-merchant has a dedicated account manager who ensures detailed follow-up of their needs."
-      },
+
       {
         "title": "Delivery Professionalism",
         "description": "Our experienced delivery drivers guarantee effective communication and quality package distribution, reinforcing your brand image."
@@ -157,26 +158,31 @@
       {
         "name": "Melkamu Abraraw",
         "role": "Online Retailer",
+        "image": "/images/melke.jpeg",
+
         "stars": 5,
         "text": "I’ve used Hand to Hand Express multiple times and they never disappoint. Deliveries are always on time and packages arrive in perfect condition. Highly recommended for anyone who needs fast and reliable delivery in the city."
       },
       {
         "name": "Mentesnot Zewude",
         "role": "Brand Owner",
+        "image": "/images/minte.jpeg",
         "stars": 5,
         "text": "Great express delivery service at a reasonable price. I like how efficient they are even during busy days. Definitely my go-to delivery service now."
       },
       {
-        "name": "Aman Niguse",
-        "role": "Business Owner",
-        "stars": 4,
-        "text": "Professional drivers who treat packages with care. Our fragile goods have never arrived damaged. Very impressed."
+        "name": "Mustefa Wado",
+        "role": "Founder, WadoTax",
+        "image": "/images/muste-brand.jpg",
+        "stars": 5,
+        "text": "Great experience with Hand to Hand Express  Reliable, professional, and excellent customer service. My parcel arrived safely and on time."
       },
       {
-        "name": "Ephrem Adane",
-        "role": "Online Retailer",
+        "name": "Nora Isaiah",
+        "role": "Customer",
         "stars": 4,
-        "text": "Professional drivers who treat packages with care. Our fragile goods have never arrived damaged. Very impressed.Great express delivery service at a reasonable price. I like how efficient they are even during busy days. Definitely my go-to delivery service now."
+        "image": "/images/nora.png",
+        "text": "I highly recommend Hand to Hand Express for anyone looking for a dependable courier service. They handle packages with the utmost care, ensuring everything arrives safely and in perfect condition. Their service is consistently fast, professional, and reliable every single time. It makes shipping completely stress-free."
       }
     ]
   },
@@ -373,7 +379,7 @@
 
     "express": {
       "title": "Express Delivery",
-      "description": "Need it now? With H2H Express, you can have your packages delivered in as little as 90 minutes anywhere in Addis Ababa. Whether it's a forgotten document, urgent medicine, or a surprise gift, our team ensures top-notch speed and reliability, so you never have to wait."
+      "description": "With H2H Express, we provide fast and reliable express delivery services across both Canada and Ethiopia. Whether it’s urgent documents, important parcels, or time-sensitive items, our team ensures secure handling and rapid delivery so your packages arrive safely and on time, no matter the distance."
     },
 
     "sameDay": {

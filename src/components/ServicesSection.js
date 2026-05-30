@@ -20,7 +20,7 @@ export default function DeliveryProcess() {
     },
     {
       id: 2,
-      image: "/images/steps/step_2.png",
+      image: "/images/h2h_Delivery_1.jpg",
       title: t("steps.step2.title"),
       desc: t("steps.step2.desc"),
       points: [t("steps.step2.points.0"), t("steps.step2.points.1")],
@@ -36,7 +36,7 @@ export default function DeliveryProcess() {
     },
     {
       id: 4,
-      image: "/images/steps/step_4.png",
+      image: "/images/h2h_2.jpg",
       title: t("steps.step4.title"),
       desc: t("steps.step4.desc"),
       points: [t("steps.step4.points.0"), t("steps.step4.points.1")],
