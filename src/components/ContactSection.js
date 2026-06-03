@@ -151,7 +151,6 @@ export default function ContactSection() {
     name: "",
     phone: "",
     email: "",
-    subject: "",
     service: "",
     message: "",
   });
@@ -165,15 +164,36 @@ export default function ContactSection() {
     }));
   }
 
-  function handleSubmit(e) {
+  // ── ONLY THIS FUNCTION CHANGED ──────────────────────────────────────────────
+  async function handleSubmit(e) {
     e.preventDefault();
 
     setSubmitted(true);
 
-    setTimeout(() => {
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formState),
+      });
+
+      if (!res.ok) throw new Error("Failed to send");
+
+      setFormState({
+        name: "",
+        phone: "",
+        email: "",
+        service: "",
+        message: "",
+      });
+
+      setTimeout(() => setSubmitted(false), 3000);
+    } catch (err) {
+      console.error(err);
       setSubmitted(false);
-    }, 3000);
+    }
   }
+  // ───────────────────────────────────────────────────────────────────────────
 
   return (
     <section
@@ -355,28 +375,6 @@ export default function ContactSection() {
 
               {/* Subject + Service */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <Field label={t("form.subject")} required>
-                  <div className="relative">
-                    <select
-                      name="subject"
-                      value={formState.subject}
-                      onChange={handleChange}
-                      className={selectCls}
-                      required
-                    >
-                      <option value="">{t("form.selectPlaceholder")}</option>
-
-                      {t.raw("form.subjectOptions").map((opt, i) => (
-                        <option key={i} value={opt}>
-                          {opt}
-                        </option>
-                      ))}
-                    </select>
-
-                    <ChevronIcon />
-                  </div>
-                </Field>
-
                 <Field label={t("form.service")} required>
                   <div className="relative">
                     <select
@@ -416,7 +414,8 @@ export default function ContactSection() {
               {/* Submit */}
               <button
                 type="submit"
-                className="self-start inline-flex items-center gap-2 px-8 py-3 rounded-xl bg-gradient-to-r from-[rgb(var(--color-brand))] to-[rgb(var(--color-brand-dark))] text-white text-sm font-bold shadow-md shadow-[rgb(var(--color-brand))]/30 hover:shadow-lg hover:shadow-[rgb(var(--color-brand))]/40 hover:scale-105 active:scale-100 transition-all duration-200"
+                disabled={submitted}
+                className="self-start inline-flex items-center gap-2 px-8 py-3 rounded-xl bg-gradient-to-r from-[rgb(var(--color-brand))] to-[rgb(var(--color-brand-dark))] text-white text-sm font-bold shadow-md shadow-[rgb(var(--color-brand))]/30 hover:shadow-lg hover:shadow-[rgb(var(--color-brand))]/40 hover:scale-105 active:scale-100 transition-all duration-200 disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:scale-100"
               >
                 {submitted ? (
                   <span className="flex items-center gap-2">

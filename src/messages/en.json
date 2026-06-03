@@ -370,7 +370,7 @@
   "trustedPartners": {
     "badge": "Our Partners",
     "title": "Trusted by industry leaders",
-    "description": "We collaborate with the world's most reliable logistics and shipping companies to deliver excellence."
+    "description": "We are trusted by the most reliable companies in both Canada and Ethiopia that use our services."
   },
 
   "Services": {
@@ -394,7 +394,7 @@
 
     "additional": {
       "title": "Additional Services",
-      "description": "Beyond delivery, H2H Express offers value-added services, including warehousing for lightweight packages, cash-on-collection for online businesses, and insurance coverage for lost or damaged goods. These services ensure convenience and peace of mind."
+      "description": "From proactive customer support and professional drivers to secure, rapid bank transfers, H2H Express protects your brand and optimizes your business operations every step of the way."
     }
   },
   "login": {
@@ -545,7 +545,7 @@
     "label": "FAQs",
     "title": {
       "line1": "Questions?",
-      "line2": "Glad you asked"
+      "line2": ""
     },
     "questions": {
       "q1": "Do you handle international shipments?",
@@ -608,7 +608,12 @@
 
       "subjectOptions": ["General Inquiry", "Support", "Partnership"],
 
-      "serviceOptions": ["Web Development", "UI/UX Design", "SEO"],
+      "serviceOptions": [
+        "Express Delivery",
+        "Same-Day Delivery",
+        "Next-Day Delivery",
+        "Additional Services"
+      ],
 
       "message": "Message",
       "messagePlaceholder": "Write your message here...",

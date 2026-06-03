@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 
 import { useEffect, useRef, useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
@@ -157,39 +158,41 @@ const ICON_KEYS = [
 ];
 
 // ─── ServiceCard ─────────────────────────────────────────────────────────────
+
 function ServiceCard({ service, iconKey, index, inView }) {
+  const locale = useLocale();
+
   const delay = `${(index % 3) * 100 + Math.floor(index / 3) * 200}ms`;
 
   return (
-    <div
-      className="relative flex flex-col items-center pt-10 group"
-      style={{
-        opacity: inView ? 1 : 0,
-        transform: inView ? "none" : "translateY(50px) scale(0.95)",
-        transition: `opacity 0.6s ease ${delay}, transform 0.6s ease ${delay}`,
-      }}
-    >
-      {/* Floating icon circle */}
+    <Link href={`/${locale}/services`} className="block">
       <div
-        className="absolute -top-6 z-10 flex items-center justify-center w-14 h-14 rounded-full bg-[rgb(var(--color-brand))] text-white shadow-lg shadow-[rgb(var(--color-brand-dark))]/30 ring-4 ring-[rgb(var(--color-brand-light))]/30 group-hover:scale-110 group-hover:shadow-xl transition-all duration-300"
-        aria-hidden="true"
+        className="relative flex flex-col items-center pt-10 group cursor-pointer"
+        style={{
+          opacity: inView ? 1 : 0,
+          transform: inView ? "none" : "translateY(50px) scale(0.95)",
+          transition: `opacity 0.6s ease ${delay}, transform 0.6s ease ${delay}`,
+        }}
       >
-        {icons[iconKey]}
-      </div>
+        {/* Floating icon circle */}
+        <div className="absolute -top-6 z-10 flex items-center justify-center w-14 h-14 rounded-full bg-[rgb(var(--color-brand))] text-white shadow-lg shadow-[rgb(var(--color-brand-dark))]/30 ring-4 ring-[rgb(var(--color-brand-light))]/30 group-hover:scale-110 group-hover:shadow-xl transition-all duration-300">
+          {icons[iconKey]}
+        </div>
 
-      {/* Card body */}
-      <div className="w-full h-full bg-white rounded-2xl px-6 pt-12 pb-7 text-center shadow-[0_4px_24px_rgba(0,0,0,0.08)] group-hover:shadow-[0_8px_36px_rgba(0,0,0,0.14)] group-hover:-translate-y-1 transition-all duration-300">
-        {/* Top accent bar on hover */}
-        <div className="absolute top-0 left-6 right-6 h-0.5 rounded-b-full bg-[rgb(var(--color-brand))] scale-x-0 group-hover:scale-x-100 transition-transform duration-400 origin-center" />
+        {/* Card body */}
+        <div className="w-full h-full bg-white rounded-2xl px-6 pt-12 pb-7 text-center shadow-[0_4px_24px_rgba(0,0,0,0.08)] group-hover:shadow-[0_8px_36px_rgba(0,0,0,0.14)] group-hover:-translate-y-1 transition-all duration-300">
+          <div className="absolute top-0 left-6 right-6 h-0.5 rounded-b-full bg-[rgb(var(--color-brand))] scale-x-0 group-hover:scale-x-100 transition-transform duration-400 origin-center" />
 
-        <h3 className="text-base font-bold text-gray-900 mb-2 leading-snug">
-          {service.title}
-        </h3>
-        <p className="text-gray-500 text-sm leading-relaxed">
-          {service.description}
-        </p>
+          <h3 className="text-base font-bold text-gray-900 mb-2 leading-snug">
+            {service.title}
+          </h3>
+
+          <p className="text-gray-500 text-sm leading-relaxed">
+            {service.description}
+          </p>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 }
 

@@ -195,7 +195,7 @@ export default function Hero() {
             {[
               { value: "10K+", label: t("stat1"), delay: 200 },
               { value: "24/7", label: t("stat2"), delay: 200 },
-              { value: "50+", label: t("stat3"), delay: 300 },
+              { value: "20+", label: t("stat3"), delay: 300 },
             ].map((s, i) => (
               <AnimatedStat
                 key={i}

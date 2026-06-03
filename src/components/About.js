@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import SlideGallery from "@/components/Slidegallery";
 
 // ─── Stats ────────────────────────────────────────────────────────────────────
 const STATS_KEYS = [
@@ -149,7 +150,6 @@ export default function AboutUs() {
           animation: fadeUp 0.7s ease both;
         }
       `}</style>
-
       {/* HERO */}
       <section
         className="relative w-full min-h-px py-28 bg-cover bg-center bg-no-repeat flex items-center"
@@ -198,7 +198,6 @@ export default function AboutUs() {
           ))}
         </div>
       </section>
-
       {/* MISSION & VISION */}
       <section className="bg-gray-50 px-5 py-20">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-5">
@@ -223,7 +222,6 @@ export default function AboutUs() {
           </div>
         </div>
       </section>
-
       {/* VALUES */}
       <section className="bg-white px-5 py-20">
         <div className="max-w-6xl mx-auto">
@@ -354,8 +352,7 @@ export default function AboutUs() {
           </div>
         </div>
       </section>
-
-      {/* CTA */}
+      {/* CTA */} <SlideGallery />
       <section className="bg-white px-5 py-20">
         <div className="max-w-4xl mx-auto rounded-3xl border border-yellow-200 bg-yellow-50/40 p-12 md:p-16 text-center">
           <h2
