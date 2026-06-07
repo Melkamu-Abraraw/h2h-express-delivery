@@ -35,7 +35,7 @@ function validate(f) {
   if (!f.to.trim()) errors.to = "Travelling to is required.";
 
   if (!f.kg || isNaN(f.kg) || Number(f.kg) <= 0)
-    errors.kg = "Enter how many kg you can carry.";
+    errors.kg = "Enter how many bags you can carry.";
   else if (Number(f.kg) > 500) errors.kg = "Please enter a realistic weight.";
 
   return errors;
@@ -379,10 +379,10 @@ export default function CarrierForm() {
             </p>
             <div className="flex flex-col gap-4">
               <Field
-                label="Available weight (kg)"
+                label="Laggage capacity"
                 required
                 error={touched.kg && errors.kg}
-                hint="How many kg can you carry for H2H?"
+                hint="How many bags can you carry for H2H?"
               >
                 <input
                   name="kg"
