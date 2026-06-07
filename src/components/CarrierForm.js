@@ -4,7 +4,7 @@ import { useState } from "react";
 
 // ── replace this with the WhatsApp number that receives the info
 // format: country code + number, no + or spaces, e.g. "12895551234"
-const WHATSAPP_NUMBER = "251936096060";
+const WHATSAPP_NUMBER = "14379977533";
 
 // ── Validation ────────────────────────────────────────────────────────────────
 function validate(f) {
@@ -51,7 +51,7 @@ function buildMessage(f) {
     `✈️ *Route:* ${f.from} → ${f.to}\n` +
     `📅 *Departure:* ${f.departure}\n` +
     `📅 *Arrival:* ${f.arrival}\n\n` +
-    `⚖️ *Available Capacity:* ${f.kg} kg\n` +
+    `⚖️ *Available Capacity:* ${f.kg} bags\n` +
     `📦 *Package Types OK:* ${f.packageTypes.length ? f.packageTypes.join(", ") : "—"}\n\n` +
     `📝 *Notes:* ${f.notes || "—"}`
   );
