@@ -2,10 +2,13 @@
 
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { useLocale } from "next-intl";
 
 export default function ServicesPage() {
   const t = useTranslations("Services");
   const t1 = useTranslations("about-us");
+  const locale = useLocale();
 
   // Reusable animation variants
   const fadeUp = {
@@ -71,7 +74,7 @@ export default function ServicesPage() {
           viewport={{ once: true }}
           variants={fadeRight}
         >
-          <img src="/images/van_3.png" className="w-full max-w-full h-auto" />
+          <img src="/images/new.png" className="w-full max-w-full h-auto" />
         </motion.div>
       </div>
 
@@ -126,7 +129,7 @@ export default function ServicesPage() {
           variants={fadeRight}
         >
           <img
-            src="/images/service_step_4.jpg"
+            src="/images/next_day_service.png"
             className="w-full max-w-full h-auto"
           />
         </motion.div>
@@ -180,10 +183,11 @@ export default function ServicesPage() {
             <button className="brand-bg text-white font-bold text-sm px-8 py-4 rounded-xl hover:scale-105 transition-all">
               {t1("cta.primary")}
             </button>
-
-            <button className="text-gray-700 font-bold text-sm px-8 py-4 rounded-xl border-2 border-gray-200 hover:border-yellow-300 transition-all">
-              {t1("cta.secondary")}
-            </button>
+            <Link href={`/${locale}/contact-us`}>
+              <button className="text-gray-700 font-bold text-sm px-8 py-4 rounded-xl border-2 border-gray-200 hover:border-yellow-300 transition-all">
+                {t1("cta.secondary")}
+              </button>
+            </Link>
           </div>
         </div>
       </section>

@@ -258,7 +258,8 @@
       "label": "Our Story",
       "title": "Built With Passion, Driven By Purpose",
       "paragraph1": "We started with a simple belief — delivery should be fast, reliable, and human-centered. What began as a local logistics initiative has grown into a trusted delivery network serving businesses and communities across the region.",
-      "paragraph2": "Through technology, dedication, and customer trust, we continue to redefine last-mile delivery while maintaining the personal touch that sets us apart."
+      "paragraph2": "Through technology, dedication, and customer trust, we continue to redefine last-mile delivery while maintaining the personal touch that sets us apart.",
+      "paragraph3": "Today, we proudly serve as a bridge between Canada and Ethiopia, enabling Ethiopians living in Canada to send packages home with ease. From personal parcels and gifts to commercial shipments, we provide a fast, secure, and dependable delivery experience, giving our customers peace of mind every step of the way."
     },
     "values": {
       "label": "About Us",
@@ -292,24 +293,24 @@
       "subheading": "A passionate team of logistics experts, tech builders, and service champions.",
       "members": [
         {
-          "name": "Abebe Girma",
+          "name": "Hapi",
           "role": "Founder & CEO",
-          "bio": "15 years in logistics, obsessed with on-time delivery."
+          "bio": "8 years in logistics, obsessed with on-time delivery."
         },
         {
-          "name": "Sara Tadesse",
-          "role": "Head of Operations",
-          "bio": "Keeps 500+ daily deliveries running like clockwork."
+          "name": "Selam Gebremedin",
+          "role": "Head of Marketing",
+          "bio": "Keeps 100+ daily deliveries running like clockwork."
         },
         {
-          "name": "Yonas Bekele",
-          "role": "Tech Lead",
-          "bio": "Built our real-time tracking platform from scratch."
+          "name": "Woldegebrel Kesse",
+          "role": "Logistics Supervisor",
+          "bio": "Oversees package processing and delivery operations."
         },
         {
-          "name": "Meron Haile",
-          "role": "Customer Experience",
-          "bio": "Ensures every interaction leaves a lasting impression."
+          "name": "Estifanos",
+          "role": "Osingten Branch Coordinator",
+          "bio": "Oversees Osingten branch operations and logistics activities"
         }
       ]
     },
@@ -567,22 +568,22 @@
 
     "phone": {
       "label": "Phone",
-      "value": "+251 900 000 000"
+      "value": "+1 (437) 997-7533 , +251 91 909 9601"
     },
 
     "email": {
       "label": "Email",
-      "value": "hello@example.com"
+      "value": "h2hexp2025@gmail.com"
     },
 
     "address": {
       "label": "Address",
-      "value": "Addis Ababa, Ethiopia"
+      "value": "2017 Danforth Ave, Toronto, ON M4C 1J7, Canada"
     },
 
     "whatsapp": {
       "label": "Chat with us on WhatsApp",
-      "number": "251900000000",
+      "number": "14379977533",
       "cta": "Message"
     },
 
@@ -619,7 +620,10 @@
       "messagePlaceholder": "Write your message here...",
 
       "submit": "Send Message",
-      "sent": "Message Sent"
+      "sent": "Message Sent",
+      "sending": "Sending...",
+      "toastSuccess": "Message sent! We'll get back to you soon.",
+      "toastError": "Something went wrong. Please try again."
     }
   }
 }

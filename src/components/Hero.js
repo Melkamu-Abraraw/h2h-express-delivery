@@ -212,7 +212,7 @@ export default function Hero() {
           className={`hero-fade-right delay-300 py-2 relative w-110 md:w-150 h-120 flex-shrink-0 flex items-center justify-center ${loaded ? "visible" : ""}`}
         >
           <img
-            src="/images/Home_3.jpg"
+            src="/images/papi_2.png"
             alt="Delivery"
             className="relative z-10 w-full max-w-[850px] object-contain"
           />

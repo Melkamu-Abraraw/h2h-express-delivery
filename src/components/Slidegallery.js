@@ -4,6 +4,10 @@ import { useState, useEffect, useCallback, useRef } from "react";
 
 const SLIDES = [
   {
+    id: 7,
+    image: "/images/hapi_4.jpeg",
+  },
+  {
     id: 1,
     image: "/images/slide_1.png",
   },
@@ -16,8 +20,20 @@ const SLIDES = [
     image: "/images/slide_3.png",
   },
   {
+    id: 5,
+    image: "/images/selam_2.JPG",
+  },
+  {
     id: 4,
     image: "/images/slide_4.png",
+  },
+  {
+    id: 6,
+    image: "/images/hapi_3.jpeg",
+  },
+  {
+    id: 6,
+    image: "/images/h2h2.jpg",
   },
 ];
 

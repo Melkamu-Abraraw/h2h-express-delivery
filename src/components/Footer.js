@@ -46,13 +46,15 @@ export default function Footer() {
           <p className="text-sm opacity-90 mb-3">
             <strong>{t("tel")}</strong>
             <br />
-            +251 994 104 901
+            +251 91 909 9601
+            <br />
+            +1 437 997 7533
           </p>
 
           <p className="text-sm opacity-90 mb-3">
             <strong>{t("email")}</strong>
             <br />
-            info@h2hexpress.com
+            h2hexp2025@gmail.com
           </p>
 
           <p className="text-sm opacity-90 mb-2">
@@ -61,7 +63,7 @@ export default function Footer() {
 
           <div className="flex gap-3 mt-2">
             <a
-              href="https://facebook.com"
+              href="https://www.tiktok.com/@handtohandexpress2"
               target="_blank"
               rel="noopener noreferrer"
               className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/40 transition"
@@ -79,7 +81,7 @@ export default function Footer() {
             </a>
 
             <a
-              href="https://instagram.com"
+              href="https://www.tiktok.com/@handtohandexpress2"
               target="_blank"
               rel="noopener noreferrer"
               className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/40 transition"
@@ -121,7 +123,7 @@ export default function Footer() {
           <h4 className="font-semibold mb-4">{t("contactUs")}</h4>
           <ul className="space-y-2 text-sm opacity-90">
             <li>
-              <a href="mailto:info@h2hexpress.com" className="hover:underline">
+              <a href="mailto:h2hexp2025@gmail.com" className="hover:underline">
                 {t("links.email")}
               </a>
             </li>

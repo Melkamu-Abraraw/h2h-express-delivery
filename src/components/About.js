@@ -1,18 +1,20 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import SlideGallery from "@/components/Slidegallery";
+import Link from "next/link";
 
 // ─── Stats ────────────────────────────────────────────────────────────────────
 const STATS_KEYS = [
   { value: "10K+", key: "deliveries" },
-  { value: "50+", key: "cities" },
+  { value: "20+", key: "cities" },
   { value: "98%", key: "ontime" },
   { value: "6+", key: "years" },
 ];
 
 export default function AboutUs() {
   const t = useTranslations("about-us");
+  const locale = useLocale();
 
   const values = [
     {
@@ -42,25 +44,25 @@ export default function AboutUs() {
       name: t("team.members.0.name"),
       role: t("team.members.0.role"),
       bio: t("team.members.0.bio"),
-      image: "/images/muste-brand.jpg",
+      image: "/images/hapi_2.jpeg",
     },
     {
       name: t("team.members.1.name"),
       role: t("team.members.1.role"),
       bio: t("team.members.1.bio"),
-      image: "/images/muste-brand.jpg",
+      image: "/images/Selam.png",
     },
     {
       name: t("team.members.2.name"),
       role: t("team.members.2.role"),
       bio: t("team.members.2.bio"),
-      image: "/images/muste-brand.jpg",
+      image: "/images/Woldegebrel.png",
     },
     {
       name: t("team.members.3.name"),
       role: t("team.members.3.role"),
       bio: t("team.members.3.bio"),
-      image: "/images/muste-brand.jpg",
+      image: "/images/Estifanos.jpeg",
     },
   ];
 
@@ -270,17 +272,18 @@ export default function AboutUs() {
                   {t("our_story.label")}
                 </span>
               </div>
-
               <h2 className="text-4xl md:text-5xl font-black text-gray-900 leading-tight mb-6">
                 {t("our_story.title")}
               </h2>
-
-              <p className="text-gray-600 text-lg leading-relaxed mb-5">
+              <p className="text-gray-600 text-md leading-relaxed mb-5">
                 {t("our_story.paragraph1")}
               </p>
-
-              <p className="text-gray-600 text-lg leading-relaxed">
+              <p className="text-gray-600 text-md leading-relaxed">
                 {t("our_story.paragraph2")}
+              </p>
+              <br />
+              <p className="text-gray-600 text-md leading-relaxed">
+                {t("our_story.paragraph3")}
               </p>
             </div>
 
@@ -289,9 +292,9 @@ export default function AboutUs() {
               <div className="absolute -inset-4 bg-yellow-400/20 rounded-[30px] blur-2xl"></div>
 
               <img
-                src="/images/h2h2.jpg"
+                src="/images/Team_1.png"
                 alt="Company Story"
-                className="relative w-full h-[600px] object-cover rounded-[28px]"
+                className="relative w-full h-[400px] object-cover rounded-[28px]"
               />
             </div>
           </div>
@@ -373,10 +376,11 @@ export default function AboutUs() {
             <button className="brand-bg text-white font-bold text-sm px-8 py-4 rounded-xl hover:scale-105 transition-all">
               {t("cta.primary")}
             </button>
-
-            <button className="text-gray-700 font-bold text-sm px-8 py-4 rounded-xl border-2 border-gray-200 hover:border-yellow-300 transition-all">
-              {t("cta.secondary")}
-            </button>
+            <Link href={`/${locale}/contact-us`}>
+              <button className="text-gray-700 font-bold text-sm px-8 py-4 rounded-xl border-2 border-gray-200 hover:border-yellow-300 transition-all">
+                {t("cta.secondary")}
+              </button>
+            </Link>
           </div>
         </div>
       </section>
