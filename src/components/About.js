@@ -9,7 +9,7 @@ const STATS_KEYS = [
   { value: "10K+", key: "deliveries" },
   { value: "20+", key: "cities" },
   { value: "98%", key: "ontime" },
-  { value: "4+", key: "years" },
+  { value: "2+", key: "years" },
 ];
 
 export default function AboutUs() {
@@ -56,13 +56,13 @@ export default function AboutUs() {
       name: t("team.members.3.name"),
       role: t("team.members.3.role"),
       bio: t("team.members.3.bio"),
-      image: "/images/h2h_chief_operating_officer.jpg",
+      image: "/images/h2h_managing_director.jpg",
     },
     {
       name: t("team.members.2.name"),
       role: t("team.members.2.role"),
       bio: t("team.members.2.bio"),
-      image: "/images/h2h_managing_director.jpg",
+      image: "/images/h2h_chief_operating_officer.jpg",
     },
     ,
     {
@@ -171,6 +171,7 @@ export default function AboutUs() {
           animation: fadeUp 0.7s ease both;
         }
       `}</style>
+
       {/* HERO */}
       <section
         className="relative w-full min-h-px py-28 bg-cover bg-center bg-no-repeat flex items-center"
@@ -192,7 +193,6 @@ export default function AboutUs() {
               }}
             >
               <span className="block">{t("hero.title_line1")}</span>
-
               <span className="block brand-text">{t("hero.title_line2")}</span>
             </h1>
 
@@ -202,6 +202,7 @@ export default function AboutUs() {
           </div>
         </div>
       </section>
+
       {/* STATS */}
       <section className="bg-white px-5 py-16">
         <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -211,7 +212,6 @@ export default function AboutUs() {
               className="h2h-card rounded-2xl px-6 py-8 text-center bg-white"
             >
               <div className="stat-num mb-1">{value}</div>
-
               <div className="text-gray-400 text-xs font-semibold uppercase tracking-wider">
                 {t(`stats.${key}`)}
               </div>
@@ -219,14 +219,13 @@ export default function AboutUs() {
           ))}
         </div>
       </section>
+
       {/* MISSION & VISION */}
       <section className="bg-gray-50 px-5 py-20">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-5">
           <div className="h2h-card rounded-3xl p-8 bg-white relative overflow-hidden">
             <div className="text-3xl mb-5">🎯</div>
-
             <div className="section-label">{t("mission.label")}</div>
-
             <p className="text-gray-600 leading-relaxed text-[15px]">
               {t("mission.text")}
             </p>
@@ -234,15 +233,14 @@ export default function AboutUs() {
 
           <div className="h2h-card rounded-3xl p-8 bg-white relative overflow-hidden">
             <div className="text-3xl mb-5">🌍</div>
-
             <div className="section-label">{t("vision.label")}</div>
-
             <p className="text-gray-600 leading-relaxed text-[15px]">
               {t("vision.text")}
             </p>
           </div>
         </div>
       </section>
+
       {/* VALUES */}
       <section className="bg-white px-5 py-20">
         <div className="max-w-6xl mx-auto">
@@ -250,7 +248,6 @@ export default function AboutUs() {
             <div className="section-label mx-auto justify-center">
               {t("values.label")}
             </div>
-
             <h2
               className="font-black text-gray-900"
               style={{
@@ -266,11 +263,9 @@ export default function AboutUs() {
             {values.map((v, i) => (
               <div key={i} className="h2h-card rounded-2xl p-6 bg-white">
                 <div className="text-3xl mb-4">{v.icon}</div>
-
                 <h3 className="font-bold text-gray-900 text-base mb-2">
                   {v.title}
                 </h3>
-
                 <p className="text-gray-500 text-sm leading-relaxed">
                   {v.desc}
                 </p>
@@ -279,6 +274,8 @@ export default function AboutUs() {
           </div>
         </div>
       </section>
+
+      {/* OUR STORY */}
       <section className="py-20 bg-[#f7f7f7]">
         <div className="max-w-7xl mx-auto px-5">
           <div className="grid lg:grid-cols-2 gap-12 items-center bg-white rounded-[32px] p-8 md:p-14 shadow-sm border border-gray-100">
@@ -286,7 +283,6 @@ export default function AboutUs() {
             <div>
               <div className="inline-flex items-center gap-3 mb-6">
                 <span className="w-10 h-[2px] bg-yellow-500"></span>
-
                 <span className="uppercase tracking-[0.2em] text-sm font-bold text-yellow-500">
                   {t("our_story.label")}
                 </span>
@@ -311,32 +307,65 @@ export default function AboutUs() {
               </p>
             </div>
 
-            {/* RIGHT IMAGE (FIXED RESPONSIVE VERSION) */}
+            {/* RIGHT IMAGE */}
             <div className="relative flex justify-center items-center">
-              {/* Glow background effect */}
               <div className="absolute -inset-4 bg-yellow-400/20 rounded-[30px] blur-2xl"></div>
-
-              {/* Image wrapper */}
               <div className="relative w-full max-w-[500px]">
                 <img
                   src="/images/Team_1.png"
                   alt="Company Story"
-                  className="
-              w-full 
-              h-auto 
-              max-h-[400px] 
-              sm:max-h-[350px] 
-              md:max-h-[400px] 
-              object-contain 
-              md:object-cover 
-              rounded-[28px]
-            "
+                  className="w-full h-auto max-h-[400px] sm:max-h-[350px] md:max-h-[400px] object-contain md:object-cover rounded-[28px]"
                 />
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      {/* HOSTING BRANCH */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-5">
+          <div className="grid lg:grid-cols-2 gap-12 items-center bg-[#f7f7f7] rounded-[32px] p-8 md:p-14 shadow-sm border border-gray-100">
+            {/* LEFT CONTENT */}{" "}
+            <div className="relative flex justify-center items-center">
+              <div className="absolute -inset-4 bg-yellow-400/20 rounded-[30px] blur-2xl"></div>
+              <div className="relative w-full max-w-[500px]">
+                <img
+                  src="/images/slide_3.png"
+                  alt="Hosting Branch"
+                  className="w-full h-auto max-h-[600px] sm:max-h-[350px] md:max-h-[600px] object-contain md:object-cover rounded-[28px]"
+                />
+              </div>
+            </div>
+            <div>
+              <div className="inline-flex items-center gap-3 mb-6">
+                <span className="w-10 h-[2px] bg-yellow-500"></span>
+                <span className="uppercase tracking-[0.2em] text-sm font-bold text-yellow-500">
+                  {t("hosting_branch.label")}
+                </span>
+              </div>
+
+              <h2 className="text-2xl md:text-3xl font-black text-gray-900 leading-tight mb-6">
+                {t("hosting_branch.title")}
+              </h2>
+
+              <p className="text-gray-600 text-md leading-relaxed mb-5">
+                {t("hosting_branch.paragraph1")}
+              </p>
+
+              <p className="text-gray-600 text-md leading-relaxed mb-5">
+                {t("hosting_branch.paragraph2")}
+              </p>
+
+              <p className="text-gray-600 text-md leading-relaxed">
+                {t("hosting_branch.paragraph3")}
+              </p>
+            </div>
+            {/* RIGHT IMAGE */}
+          </div>
+        </div>
+      </section>
+
       {/* TEAM */}
       <section className="bg-gray-50 px-5 py-20">
         <div className="max-w-6xl mx-auto">
@@ -344,7 +373,6 @@ export default function AboutUs() {
             <div className="section-label mx-auto justify-center">
               {t("team.label")}
             </div>
-
             <h2
               className="font-black text-gray-900 mb-3"
               style={{
@@ -354,7 +382,6 @@ export default function AboutUs() {
             >
               {t("team.heading")}
             </h2>
-
             <p className="text-gray-400 text-base max-w-xl mx-auto">
               {t("team.subheading")}
             </p>
@@ -373,16 +400,13 @@ export default function AboutUs() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-
                 <div>
                   <div className="font-bold text-gray-900 text-base">
                     {m.name}
                   </div>
-
                   <div className="brand-text text-xs font-bold mb-1 uppercase tracking-wide">
                     {m.role}
                   </div>
-
                   <p className="text-gray-500 text-sm leading-relaxed">
                     {m.bio}
                   </p>
@@ -392,7 +416,10 @@ export default function AboutUs() {
           </div>
         </div>
       </section>
-      {/* CTA */} <SlideGallery />
+
+      {/* SLIDE GALLERY + CTA */}
+      <SlideGallery />
+
       <section className="bg-white px-5 py-20">
         <div className="max-w-4xl mx-auto rounded-3xl border border-yellow-200 bg-yellow-50/40 p-12 md:p-16 text-center">
           <h2

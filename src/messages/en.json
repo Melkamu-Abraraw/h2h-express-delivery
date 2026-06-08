@@ -246,6 +246,13 @@
       "ontime": "On-Time Rate",
       "years": "Years of Trust"
     },
+    "hosting_branch": {
+      "label": "Hosting Branch",
+      "title": "Ossington Branch – Drop-off & Pick-up Location",
+      "paragraph1": "Our Ossington Branch is conveniently located at 884 Bloor Street West, Toronto, serving as a reliable point for both package drop-off and pick-up services.",
+      "paragraph2": "Whether you are sending or receiving parcels, this location is designed to make your experience fast, simple, and efficient. Customers can safely drop off packages for dispatch or collect their incoming deliveries at their convenience.",
+      "paragraph3": "We ensure secure handling of all parcels, with staff available to assist you throughout the process. Visit us at 884 Bloor Street West, Toronto and experience smooth, reliable service from our Ossington team."
+    },
     "mission": {
       "label": "Our Mission",
       "text": "To redefine last-mile delivery by combining cutting-edge technology with human care — ensuring every package arrives safely, swiftly, and with a smile."
@@ -293,9 +300,9 @@
       "subheading": "A passionate team of logistics experts, tech builders, and service champions.",
       "members": [
         {
-          "name": "Desilal Asefa",
+          "name": "Desyilal Assefa",
           "role": "Founder & Toronto Branch Manager",
-          "bio": "4 years in logistics, obsessed with on-time delivery."
+          "bio": "2 years in logistics, obsessed with on-time delivery."
         },
         {
           "name": "Mengistu Admasu",
@@ -304,7 +311,7 @@
         },
         {
           "name": "Dawit Biruk",
-          "role": "Chief Operating Officer (COO)",
+          "role": "Founder & Chief Operating Officer (COO)",
           "bio": "Focuses on daily operations, delivery performance, fleet management, and logistics execution."
         },
         {
