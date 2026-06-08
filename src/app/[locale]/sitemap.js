@@ -1,4 +1,4 @@
-const BASE_URL = "https://h2h-express-delivery.vercel.app";
+const BASE_URL = "https://handtohandexpress.com/en";
 const LOCALES = ["en", "am", "ti"];
 
 const PAGES = [

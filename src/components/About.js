@@ -9,7 +9,7 @@ const STATS_KEYS = [
   { value: "10K+", key: "deliveries" },
   { value: "20+", key: "cities" },
   { value: "98%", key: "ontime" },
-  { value: "6+", key: "years" },
+  { value: "4+", key: "years" },
 ];
 
 export default function AboutUs() {
@@ -44,7 +44,7 @@ export default function AboutUs() {
       name: t("team.members.0.name"),
       role: t("team.members.0.role"),
       bio: t("team.members.0.bio"),
-      image: "/images/hapi_2.jpeg",
+      image: "/images/hapi_6.png",
     },
     {
       name: t("team.members.1.name"),
@@ -53,17 +53,18 @@ export default function AboutUs() {
       image: "/images/h2h_general_manager.jpg",
     },
     {
-      name: t("team.members.2.name"),
-      role: t("team.members.2.role"),
-      bio: t("team.members.2.bio"),
-      image: "/images/h2h_managing_director.jpg",
-    },
-    {
       name: t("team.members.3.name"),
       role: t("team.members.3.role"),
       bio: t("team.members.3.bio"),
       image: "/images/h2h_chief_operating_officer.jpg",
     },
+    {
+      name: t("team.members.2.name"),
+      role: t("team.members.2.role"),
+      bio: t("team.members.2.bio"),
+      image: "/images/h2h_managing_director.jpg",
+    },
+    ,
     {
       name: t("team.members.4.name"),
       role: t("team.members.4.role"),
@@ -290,30 +291,48 @@ export default function AboutUs() {
                   {t("our_story.label")}
                 </span>
               </div>
+
               <h2 className="text-4xl md:text-5xl font-black text-gray-900 leading-tight mb-6">
                 {t("our_story.title")}
               </h2>
+
               <p className="text-gray-600 text-md leading-relaxed mb-5">
                 {t("our_story.paragraph1")}
               </p>
+
               <p className="text-gray-600 text-md leading-relaxed">
                 {t("our_story.paragraph2")}
               </p>
+
               <br />
+
               <p className="text-gray-600 text-md leading-relaxed">
                 {t("our_story.paragraph3")}
               </p>
             </div>
 
-            {/* RIGHT IMAGE */}
-            <div className="relative">
+            {/* RIGHT IMAGE (FIXED RESPONSIVE VERSION) */}
+            <div className="relative flex justify-center items-center">
+              {/* Glow background effect */}
               <div className="absolute -inset-4 bg-yellow-400/20 rounded-[30px] blur-2xl"></div>
 
-              <img
-                src="/images/Team_1.png"
-                alt="Company Story"
-                className="relative w-full h-[400px] object-cover rounded-[28px]"
-              />
+              {/* Image wrapper */}
+              <div className="relative w-full max-w-[500px]">
+                <img
+                  src="/images/Team_1.png"
+                  alt="Company Story"
+                  className="
+              w-full 
+              h-auto 
+              max-h-[400px] 
+              sm:max-h-[350px] 
+              md:max-h-[400px] 
+              object-contain 
+              md:object-cover 
+              rounded-[28px]
+            "
+                />
+              </div>
             </div>
           </div>
         </div>

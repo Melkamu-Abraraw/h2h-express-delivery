@@ -10,7 +10,7 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-const BASE_URL = "https://h2h-express-delivery.vercel.app";
+const BASE_URL = "https://handtohandexpress.com/en";
 
 const META = {
   en: {
