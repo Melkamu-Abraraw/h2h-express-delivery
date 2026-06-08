@@ -52,7 +52,6 @@ function buildMessage(f) {
     `📅 *Departure:* ${f.departure}\n` +
     `📅 *Arrival:* ${f.arrival}\n\n` +
     `⚖️ *Available Capacity:* ${f.kg} bags\n` +
-    `📦 *Package Types OK:* ${f.packageTypes.length ? f.packageTypes.join(", ") : "—"}\n\n` +
     `📝 *Notes:* ${f.notes || "—"}`
   );
 }
@@ -396,31 +395,6 @@ export default function CarrierForm() {
                   onBlur={handleBlur}
                   className={ic(touched.kg && errors.kg)}
                 />
-              </Field>
-
-              <Field
-                label="Package types you accept"
-                hint="Select all that apply"
-              >
-                <div className="flex flex-wrap gap-2 mt-1">
-                  {PACKAGE_OPTIONS.map((type) => {
-                    const active = form.packageTypes.includes(type);
-                    return (
-                      <button
-                        key={type}
-                        type="button"
-                        onClick={() => togglePackageType(type)}
-                        className={`px-3 py-1.5 rounded-xl text-xs font-semibold border transition-all duration-150 ${
-                          active
-                            ? "bg-orange-500 border-orange-500 text-white"
-                            : "bg-gray-50 border-gray-200 text-gray-600 hover:border-orange-300 hover:text-orange-500"
-                        }`}
-                      >
-                        {type}
-                      </button>
-                    );
-                  })}
-                </div>
               </Field>
             </div>
           </div>

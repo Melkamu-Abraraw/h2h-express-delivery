@@ -50,18 +50,36 @@ export default function AboutUs() {
       name: t("team.members.1.name"),
       role: t("team.members.1.role"),
       bio: t("team.members.1.bio"),
-      image: "/images/Selam.png",
+      image: "/images/h2h_general_manager.jpg",
     },
     {
       name: t("team.members.2.name"),
       role: t("team.members.2.role"),
       bio: t("team.members.2.bio"),
-      image: "/images/Woldegebrel.png",
+      image: "/images/h2h_managing_director.jpg",
     },
     {
       name: t("team.members.3.name"),
       role: t("team.members.3.role"),
       bio: t("team.members.3.bio"),
+      image: "/images/h2h_chief_operating_officer.jpg",
+    },
+    {
+      name: t("team.members.4.name"),
+      role: t("team.members.4.role"),
+      bio: t("team.members.4.bio"),
+      image: "/images/Selam.png",
+    },
+    {
+      name: t("team.members.5.name"),
+      role: t("team.members.5.role"),
+      bio: t("team.members.5.bio"),
+      image: "/images/Woldegebrel.png",
+    },
+    {
+      name: t("team.members.6.name"),
+      role: t("team.members.6.role"),
+      bio: t("team.members.6.bio"),
       image: "/images/Estifanos.jpeg",
     },
   ];

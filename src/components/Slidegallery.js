@@ -5,7 +5,7 @@ import { useState, useEffect, useCallback, useRef } from "react";
 const SLIDES = [
   {
     id: 7,
-    image: "/images/hapi_4.jpeg",
+    image: "/images/hapi new.png",
   },
   {
     id: 1,
@@ -31,9 +31,18 @@ const SLIDES = [
     id: 6,
     image: "/images/hapi_3.jpeg",
   },
+
+  {
+    id: 7,
+    image: "/images/hapi_3.png",
+  },
   {
     id: 6,
     image: "/images/h2h2.jpg",
+  },
+  {
+    id: 7,
+    image: "/images/teamphoto.png",
   },
 ];
 
