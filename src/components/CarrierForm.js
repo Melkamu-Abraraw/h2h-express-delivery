@@ -44,7 +44,7 @@ function validate(f) {
 // ── Build WhatsApp message ─────────────────────────────────────────────────────
 function buildMessage(f) {
   return (
-    `🚚 *New Carrier Registration — H2H Express*\n\n` +
+    `🚚 *New Carrier Registration*\n\n` +
     `👤 *Name:* ${f.fullName}\n` +
     `📞 *Phone:* ${f.phone}\n` +
     `📧 *Email:* ${f.email || "—"}\n\n` +
@@ -181,8 +181,8 @@ export default function CarrierForm() {
             You're registered!
           </h2>
           <p className="text-gray-500 text-sm leading-relaxed mb-6">
-            Your details have been sent to H2H Express via WhatsApp. They'll be
-            in touch with you shortly.
+            Your details have been sent to Us via WhatsApp. They'll be in touch
+            with you shortly.
           </p>
           <button
             onClick={() => {
@@ -221,8 +221,8 @@ export default function CarrierForm() {
             Travelling with space?
           </h1>
           <p className="text-gray-500 text-sm leading-relaxed">
-            Fill in your travel details below. H2H Express will match you with
-            packages along your route.
+            Fill in your travel details below. We will match you with packages
+            along your route.
           </p>
         </div>
 
@@ -381,7 +381,7 @@ export default function CarrierForm() {
                 label="Laggage capacity"
                 required
                 error={touched.kg && errors.kg}
-                hint="How many bags can you carry for H2H?"
+                hint="How many bags can you carry?"
               >
                 <input
                   name="kg"
@@ -402,10 +402,7 @@ export default function CarrierForm() {
           <div className="h-px bg-gray-100" />
 
           {/* Notes */}
-          <Field
-            label="Additional notes"
-            hint="Anything H2H Express should know"
-          >
+          <Field label="Additional notes" hint="Anything We  should know">
             <textarea
               name="notes"
               rows={3}
@@ -424,7 +421,7 @@ export default function CarrierForm() {
             <svg viewBox="0 0 24 24" className="w-5 h-5" fill="currentColor">
               <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347" />
             </svg>
-            Send to H2H Express via WhatsApp
+            Send to Us via WhatsApp
           </button>
 
           <p className="text-center text-xs text-gray-400">
