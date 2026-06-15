@@ -10,7 +10,7 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-const BASE_URL = "https://handtohandexpress.com/en";
+const BASE_URL = "https://handtohandexpress.com/";
 
 const META = {
   en: {
