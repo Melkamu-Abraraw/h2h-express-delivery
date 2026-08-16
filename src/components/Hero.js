@@ -176,12 +176,15 @@ export default function Hero() {
           <div
             className={`hero-fade-up delay-500 flex gap-3 flex-wrap ${loaded ? "visible" : ""}`}
           >
-            <Link
-              href={`/`}
+            <a
+              href="https://ship.handtohandexpress.com/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-[rgb(var(--color-brand))] hover:bg-[rgb(var(--color-brand-light))] hover:scale-105 active:scale-95 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200"
             >
               {t("requestDelivery")}
-            </Link>
+            </a>
+
             <Link
               href={`/${locale}/contact-us`}
               className="border border-gray-300 text-gray-800 px-6 py-3 rounded-lg font-medium flex items-center gap-2 hover:bg-gray-50 hover:scale-105 active:scale-95 transition-all duration-200"
