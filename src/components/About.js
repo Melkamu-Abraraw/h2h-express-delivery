@@ -46,18 +46,7 @@ export default function AboutUs() {
       bio: t("team.members.0.bio"),
       image: "/images/hapi_6.png",
     },
-    {
-      name: t("team.members.1.name"),
-      role: t("team.members.1.role"),
-      bio: t("team.members.1.bio"),
-      image: "/images/h2h_general_manager.jpg",
-    },
-    {
-      name: t("team.members.3.name"),
-      role: t("team.members.3.role"),
-      bio: t("team.members.3.bio"),
-      image: "/images/h2h_managing_director.jpg",
-    },
+
     {
       name: t("team.members.2.name"),
       role: t("team.members.2.role"),
