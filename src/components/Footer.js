@@ -48,7 +48,7 @@ export default function Footer() {
             <br />
             +251 91 909 9601
             <br />
-            +1 437 997 7533
+            +1 437 529 2969
           </p>
 
           <p className="text-sm opacity-90 mb-3">
