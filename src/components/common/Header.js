@@ -40,7 +40,7 @@ export default function Header() {
         {/* LEFT NAV (DESKTOP) */}
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-gray-700">
           <Link href={`/${locale}`}>{t("home")}</Link>
-          <Link href={`/${locale}/about-us`}>{t("about")}</Link>
+          <Link href={`/${locale}`}>{t("about")}</Link>
           <Link href={`/${locale}/services`}>{t("services")}</Link>
           <Link href={`/${locale}/contact-us`}>{t("contact")}</Link>
         </nav>
@@ -92,7 +92,7 @@ export default function Header() {
           {/* NAV LINKS */}
           {[
             { name: t("home"), href: "/" },
-            { name: t("about"), href: "/about-us" },
+            { name: t("about"), href: "/" },
             { name: t("services"), href: "/services" },
             { name: t("contact"), href: "/contact-us" },
           ].map((item, i) => (

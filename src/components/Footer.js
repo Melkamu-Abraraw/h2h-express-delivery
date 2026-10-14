@@ -45,9 +45,6 @@ export default function Footer() {
 
           <p className="text-sm opacity-90 mb-3">
             <strong>{t("tel")}</strong>
-            <br />
-            +251 91 909 9601
-            <br />
             +1 437 529 2969
           </p>
 
@@ -106,7 +103,7 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link href={`/${locale}/about-us`} className="hover:underline">
+              <Link href={`/${locale}`} className="hover:underline">
                 {t("links.about")}
               </Link>
             </li>
