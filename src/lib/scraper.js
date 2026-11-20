@@ -6,8 +6,8 @@
 // parser then reads. Only links that already passed checkStoreLink are sent.
 //
 // Env (set on Vercel and in .env):
-//   SCRAPER_PROVIDER      "scraperapi" | "scrapingbee" | "zenrows"
-//   SCRAPER_API_KEY       the provider's API key
+//   SCRAPER_PROVIDER      "scrapedo" | "scraperapi" | "scrapingbee" | "zenrows"
+//   SCRAPER_API_KEY       the provider's API key / token
 //   SCRAPER_PREMIUM       "true" to use premium/residential proxies (more
 //                         reliable for Amazon, costs more credits). Default false.
 //   SCRAPER_JS_STORES     comma list of store ids to render with JavaScript
@@ -54,6 +54,16 @@ function providerUrl(target, storeId) {
   const q = new URLSearchParams();
 
   switch ((process.env.SCRAPER_PROVIDER || "").toLowerCase()) {
+    case "scrapedo":
+      // https://api.scrape.do/?token=…&url=… returns the page HTML.
+      q.set("token", key);
+      q.set("url", target);
+      if (render) q.set("render", "true");
+      if (premium) {
+        q.set("super", "true"); // residential proxies
+        q.set("geoCode", /\.ca$/i.test(new URL(target).hostname) ? "ca" : "us");
+      }
+      return `https://api.scrape.do/?${q}`;
     case "scraperapi":
       q.set("api_key", key);
       q.set("url", target);
