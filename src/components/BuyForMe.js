@@ -1264,6 +1264,7 @@ export default function BuyForMe() {
                         siteKey={CAPTCHA_SITE_KEY}
                         hl={locale === "am" ? "am" : "en"}
                         onToken={setCaptchaToken}
+                        failedText={t("form.captchaFailed")}
                       />
                     </div>
                   )}
