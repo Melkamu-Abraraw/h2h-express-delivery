@@ -9,7 +9,7 @@ export const metadata = {
     description: "Learn more about our mission and trusted delivery network.",
     url: "https://yourdomain.com/about",
     type: "website",
-    images: ["/og-image.jpg"],
+    images: ["/images/H2H_Logo.png"],
   },
 };
 

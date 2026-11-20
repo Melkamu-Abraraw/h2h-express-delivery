@@ -9,7 +9,7 @@ export const metadata = {
     title: "Contact H2H Express",
     description: "Reach out to our support team anytime.",
     url: "https://yourdomain.com/contact",
-    images: ["/og-image.jpg"],
+    images: ["/images/H2H_Logo.png"],
   },
 };
 const Contact = () => {

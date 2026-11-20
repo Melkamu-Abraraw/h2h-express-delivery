@@ -13,7 +13,7 @@ export const metadata = {
     title: "H2H Express Services",
     description: "Reliable travel-based delivery and logistics solutions.",
     url: "https://yourdomain.com/services",
-    images: ["/og-image.jpg"],
+    images: ["/images/H2H_Logo.png"],
   },
 };
 const Services = () => {

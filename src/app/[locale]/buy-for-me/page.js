@@ -31,7 +31,7 @@ export const metadata = {
     title: "Buy for Me | H2H Express",
     description:
       "We shop in Canada, you receive it in Ethiopia. Send us the link and we handle the rest.",
-    images: ["/og-image.jpg"],
+    images: ["/images/buy-for-me-banner.png"],
   },
 };
 

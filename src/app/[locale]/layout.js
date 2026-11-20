@@ -10,7 +10,7 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-const BASE_URL = "https://handtohandexpress.com/";
+const BASE_URL = "https://handtohandexpress.com"; // no trailing slash
 
 const META = {
   en: {
@@ -47,8 +47,8 @@ const jsonLd = {
   url: `${BASE_URL}/en`,
   telephone: "+1 437 997 7533",
   email: "h2hexp2025@gmail.com",
-  logo: `${BASE_URL}/H2H_Logo.png`,
-  image: `${BASE_URL}/H2H_Logo.png`,
+  logo: `${BASE_URL}/images/H2H_Logo.png`,
+  image: `${BASE_URL}/images/H2H_Logo.png`,
   address: {
     "@type": "PostalAddress",
     streetAddress: "2017 Danforth Ave",
@@ -97,6 +97,8 @@ export async function generateMetadata({ params }) {
   const m = META[locale] ?? META.en;
 
   return {
+    // Resolves relative image/URL paths in page metadata to the real domain.
+    metadataBase: new URL(BASE_URL),
     title: m.title,
     description: m.description,
     keywords: [
@@ -117,9 +119,9 @@ export async function generateMetadata({ params }) {
       type: "website",
       images: [
         {
-          url: `${BASE_URL}/H2H_Logo.png`,
-          width: 1200,
-          height: 630,
+          url: `${BASE_URL}/images/H2H_Logo.png`,
+          width: 474,
+          height: 264,
           alt: "H2H Express Delivery – Canada to Ethiopia",
         },
       ],
