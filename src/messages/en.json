@@ -736,7 +736,8 @@
       "chatSuccess": "Your request has been sent successfully. Our team will contact you shortly.",
       "sending": "Sending…",
       "captchaRequired": "Please tick “I'm not a robot”.",
-      "verifyError": "We couldn't verify your request. Please tick the box again and resend."
+      "verifyError": "We couldn't verify your request. Please tick the box again and resend.",
+      "captchaFailed": "The “I'm not a robot” check couldn't load. Please check your connection or turn off ad blockers, then reload the page."
     },
     "panel": {
       "emptyTitle": "Your item will appear here",
