@@ -1,9 +1,14 @@
 import { checkStoreLink, getStore } from "@/lib/stores";
+import { fetchViaScraper, scraperEnabled } from "@/lib/scraper";
+
+// Paid fallback fetches can take 5–20s (longer with JavaScript rendering).
+export const maxDuration = 60;
 
 const MAX_REDIRECTS = 3;
 const MAX_BYTES = 3 * 1024 * 1024;
 const TIMEOUT_MS = 8000;
-const CACHE_TTL_MS = 60 * 60 * 1000;
+const CACHE_TTL_MS = 60 * 60 * 1000; // successful previews
+const FAIL_TTL_MS = 5 * 60 * 1000; // failures (often temporary blocks)
 const RATE_LIMIT = 40; // requests per IP per window (variant switches count)
 const RATE_WINDOW_MS = 60 * 1000;
 
@@ -11,8 +16,9 @@ const RATE_WINDOW_MS = 60 * 1000;
 const cache = new Map();
 const hits = new Map();
 
-// Identify honestly as a link-preview client; we do not try to evade store
-// bot protection. Stores that block this simply return "unavailable".
+// Direct fetches identify honestly as a link-preview client. If a store blocks
+// them, the optional paid fallback in lib/scraper.js (chosen by the site owner)
+// fetches the page instead. Without it, blocked stores just return "unavailable".
 const HEADERS = {
   "User-Agent": "H2HExpressLinkPreview/1.0 (+https://handtohandexpress.com)",
   Accept: "text/html,application/xhtml+xml",
@@ -442,7 +448,7 @@ export async function POST(req) {
   }
 
   const cached = cache.get(input);
-  if (cached && Date.now() - cached.at < CACHE_TTL_MS) {
+  if (cached && Date.now() - cached.at < (cached.data.ok ? CACHE_TTL_MS : FAIL_TTL_MS)) {
     return Response.json(cached.data);
   }
 
@@ -460,10 +466,21 @@ export async function POST(req) {
     if (check.short && !resolvedUrl) {
       data = { ok: false, reason: "short" };
     } else {
-      const product =
-        page.html && isProductPage
-          ? parse(page.html, page.url, final?.store || check.store)
-          : null;
+      const store = final?.store || check.store;
+      let product =
+        page.html && isProductPage ? parse(page.html, page.url, store) : null;
+
+      // Blocked or unreadable directly (e.g. Amazon from Vercel): try the paid
+      // service. Use the product page we reached, or — if we were bounced to
+      // a block page — the customer's own (already checked) full link.
+      if (!product && scraperEnabled()) {
+        const target = isProductPage && final?.ok ? final.url : check.short ? null : input;
+        if (target) {
+          const html = await fetchViaScraper(target, store.id);
+          if (html) product = parse(html, target, store);
+        }
+      }
+
       data = product
         ? { ok: true, product, resolvedUrl }
         : { ok: false, reason: "unavailable", resolvedUrl };
