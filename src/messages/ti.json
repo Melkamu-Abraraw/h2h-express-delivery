@@ -4,8 +4,7 @@
     "about": "ስለ እኛ",
     "services": "ኣገልግሎታት",
     "contact": "ኣግኙና",
-    "login": "እቶ መእተዊ",
-    "signup": "ምዝገባ ፍጠር"
+    "buyForMe": "ዕደገለይ"
   },
   "hero": {
     "tagline": "ፍጥነትን ዝኣመነን",
@@ -632,6 +631,112 @@
 
       "submit": "ልኣኽ",
       "sent": "መልእኽቲ ተላኢኹ"
+    }
+  },
+  "BuyForMe": {
+    "hero": {
+      "title": "ብኦንላይን ርኸብዎ፣",
+      "titleHighlight": "ንሕና ነምጽኣልኩም።",
+      "subtitle": "ሊንኩ ስደዱልና። ዓዲግና ክሳብ ማዕጾኹም ነብጽሓልኩም።"
+    },
+    "steps": {
+      "items": [
+        {
+          "title": "ሊንኩ ስደዱ",
+          "text": "ኣብቲ ቅጥዒ ለጥፍዎ"
+        },
+        {
+          "title": "ዋጋ ተቐበሉ",
+          "text": "ዋጋ፣ ምልኣኽን ክፍሊትን"
+        },
+        {
+          "title": "ንዕድግ ንሰድድ",
+          "text": "ምስ ከፈልኩም"
+        },
+        {
+          "title": "ትቕበልዎ",
+          "text": "ክሳብ ማዕጾኹም"
+        }
+      ]
+    },
+    "stores": {
+      "label": "ድኳናት:"
+    },
+    "form": {
+      "subheading": "ኣብ ታሕቲ ዘለዉ ዝርዝራት መልኡ፣ ዋጋ ሒዝና ክንምለሰልኩም ኢና።",
+      "contactGroup": "ናይ ርስኹም ሓበሬታ",
+      "itemGroup": "ሓበሬታ ኣቕሓ",
+      "name": "ምሉእ ሽም",
+      "namePlaceholder": "ምሉእ ሽምኩም",
+      "phone": "ቁጽሪ ተሌፎን",
+      "email": "ኢመይል",
+      "emailPlaceholder": "you@example.com",
+      "city": "መዕለቢ",
+      "cityPlaceholder": "ሃገር ምረጹ",
+      "productDetails": "ሽም ኣቕሓ",
+      "productDetailsPlaceholder": "ንኣብነት Nike Air Force 1 '07",
+      "quantity": "ብዝሒ",
+      "optional": "ኣማራጺ",
+      "submit": "ሕቶ ስደዱ",
+      "another": "ካልእ ኣቕሓ ሕተቱ",
+      "errors": {
+        "required": "እዚ ቦታ የድሊ እዩ።",
+        "phone": "ቅኑዕ ቁጽሪ ተሌፎን የእትዉ (ንኣብነት +251 91 234 5678)።",
+        "email": "ቅኑዕ ኣድራሻ ኢመይል የእትዉ።",
+        "link": "ብhttp:// ወይ https:// ዝጅምር ቅኑዕ ሊንክ የእትዉ።",
+        "quantity": "ብዝሒ እንተወሓደ 1 ክኸውን ኣለዎ።",
+        "linkStore": "ሊንክታት እንቕበል ካብ {stores} ጥራይ እዩ። ንካልኦት ድኳናት መልእኽቲ ስደዱልና።",
+        "linkShort": "በጃኹም ካብቲ ድኳን ምሉእ ሊንክ ኣቕሓ ለጥፉ (ሓጺር ሊንክ ኣይኮነን)።"
+      },
+      "preview": {
+        "loading": "ቅድመ ምርኣይ ኣቕሓ ይጽዓን ኣሎ…",
+        "unavailable": "ነዚ ሊንክ ቅድመ ምርኣይ ከርእየኩም ኣይከኣልናን። በጃኹም ነቲ ኣቕሓ ኣብ ታሕቲ ግለጽዎ።",
+        "viewOnStore": "ኣብቲ ድኳን ርኣይዎ",
+        "priceNote": "ዋጋ ድኳን። ናይ መወዳእታ ዋጋኹም ክፍሊት ምልኣኽን ኣገልግሎትን የጠቓልል።",
+        "noPrice": "ዋጋ ኣብ ግምት ዋጋ ክፍለጥ እዩ"
+      },
+      "linkLabel": "ሊንክ ኣቕሓ ለጥፉ",
+      "linkButton": "ኣቕሓ ርኸቡ",
+      "color": "ሕብሪ",
+      "colorPlaceholder": "ንኣብነት ጸሊም",
+      "qtyDecrease": "ብዝሒ ኣጉድል",
+      "qtyIncrease": "ብዝሒ ወስኽ",
+      "options": {
+        "color": "ሕብሪ",
+        "size": "መጠን",
+        "style": "ዓይነት",
+        "unavailable": "የለን"
+      },
+      "destinations": {
+        "Canada": "ካናዳ",
+        "Ethiopia": "ኢትዮጵያ",
+        "Uganda": "ዩጋንዳ"
+      },
+      "size": "መጠን",
+      "sizePlaceholder": "ንኣብነት US 9 / M",
+      "price": "ዋጋ ድኳን",
+      "pricePlaceholder": "ንኣብነት $49.99",
+      "contactVia": "እትመርጽዎ ናይ መልእኽቲ መተግበሪ",
+      "contactViaPlaceholder": "መተግበሪ ምረጹ",
+      "chatSuccessTitle": "ሕቶኹም ተላኢኹ!",
+      "chatSuccess": "ሕቶኹም ብዓወት ተላኢኹ ኣሎ። ጉጅለና ቀልጢፉ ክረኽበኩም እዩ።",
+      "sending": "ይለኣኽ ኣሎ…",
+      "captchaRequired": "በጃኹም “I'm not a robot” ዝብል ምልክት ግበሩ።",
+      "verifyError": "ሕቶኹም ከነረጋግጽ ኣይከኣልናን። በጃኹም ነቲ ሳንዱቕ ደጊምኩም ምልክት ገይርኩም ስደዱ።"
+    },
+    "panel": {
+      "emptyTitle": "ኣቕሓኹም ኣብዚ ክረአ እዩ",
+      "emptyText": "ነቲ ኣቕሓ ንምርኣይ፣ ሕብሪ ንምምራጽን ብዝሒ ንምውሳንን ካብ Amazon፣ SHEIN፣ Walmart ወይ eBay ሊንክ ለጥፉ።",
+      "ctaQuestion": "ነዚ ክንዕድገልኩም ትደልዩ ዶ?",
+      "ctaButton": "እወ፣ ሕቶ ስደድ",
+      "change": "ቀይር"
+    },
+    "manual": {
+      "unavailableTitle": "ነዚ ኣቕሓ ክንጽዕኖ ኣይከኣልናን",
+      "manualTitle": "ዝርዝር ኣቕሓ ኣእትዉ",
+      "manualText": "ዝፈልጥዎ መልኡ፣ ዝተረፈ ንሕና ንገብሮ።",
+      "retry": "ደጊምኩም ፈትኑ",
+      "enterManually": "ቅኑዕ ኣቕሓ ኣይኮነን? ዝርዝር ባዕልኹም ኣእትዉ"
     }
   }
 }

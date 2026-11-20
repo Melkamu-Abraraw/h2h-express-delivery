@@ -6,6 +6,7 @@ const PAGES = [
   { path: "/services", priority: 0.9, changeFrequency: "monthly" },
   { path: "/about-us", priority: 0.7, changeFrequency: "monthly" },
   { path: "/contact-us", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/buy-for-me", priority: 0.8, changeFrequency: "monthly" },
 ];
 
 export default function sitemap() {

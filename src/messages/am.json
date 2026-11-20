@@ -4,8 +4,7 @@
     "about": "ስለ እኛ",
     "services": "አገልግሎቶች",
     "contact": "ያግኙን",
-    "login": "ግባ",
-    "signup": "መመዝገብ"
+    "buyForMe": "ግዛልኝ"
   },
   "hero": {
     "tagline": "ፈጣን እና አስተማማኝ",
@@ -627,6 +626,112 @@
 
       "submit": "ላክ",
       "sent": "መልዕክት ተልኳል"
+    }
+  },
+  "BuyForMe": {
+    "hero": {
+      "title": "በኦንላይን ያግኙት፣",
+      "titleHighlight": "እኛ እናመጣልዎታለን።",
+      "subtitle": "ሊንኩን ይላኩልን። ገዝተን እስከ ደጃፍዎ እናደርሳለን።"
+    },
+    "steps": {
+      "items": [
+        {
+          "title": "ሊንኩን ይላኩ",
+          "text": "በቅጹ ውስጥ ይለጥፉት"
+        },
+        {
+          "title": "ዋጋ ይቀበሉ",
+          "text": "ዋጋ፣ መላኪያ እና ክፍያ"
+        },
+        {
+          "title": "እንገዛለን እንልካለን",
+          "text": "ከከፈሉ በኋላ"
+        },
+        {
+          "title": "ይቀበላሉ",
+          "text": "እስከ ደጃፍዎ"
+        }
+      ]
+    },
+    "stores": {
+      "label": "መደብሮች:"
+    },
+    "form": {
+      "subheading": "ከታች ያሉትን ዝርዝሮች ይሙሉ፣ ዋጋውን ይዘን እንመለሳለን።",
+      "contactGroup": "የእርስዎ መረጃ",
+      "itemGroup": "የዕቃው መረጃ",
+      "name": "ሙሉ ስም",
+      "namePlaceholder": "ሙሉ ስምዎ",
+      "phone": "ስልክ ቁጥር",
+      "email": "ኢሜይል",
+      "emailPlaceholder": "you@example.com",
+      "city": "መድረሻ",
+      "cityPlaceholder": "አገር ይምረጡ",
+      "productDetails": "የዕቃው ስም",
+      "productDetailsPlaceholder": "ለምሳሌ Nike Air Force 1 '07",
+      "quantity": "ብዛት",
+      "optional": "አማራጭ",
+      "submit": "ጥያቄ ይላኩ",
+      "another": "ሌላ ዕቃ ይጠይቁ",
+      "errors": {
+        "required": "ይህ መስክ ያስፈልጋል።",
+        "phone": "ትክክለኛ ስልክ ቁጥር ያስገቡ (ለምሳሌ +251 91 234 5678)።",
+        "email": "ትክክለኛ የኢሜይል አድራሻ ያስገቡ።",
+        "link": "በhttp:// ወይም https:// የሚጀምር ትክክለኛ ሊንክ ያስገቡ።",
+        "quantity": "ብዛቱ ቢያንስ 1 መሆን አለበት።",
+        "linkStore": "ሊንኮችን የምንቀበለው ከ{stores} ብቻ ነው። ለሌሎች መደብሮች መልዕክት ይላኩልን።",
+        "linkShort": "እባክዎ ከመደብሩ ሙሉውን የዕቃ ሊንክ ይለጥፉ (አጭር ሊንክ አይደለም)።"
+      },
+      "preview": {
+        "loading": "የዕቃ ቅድመ እይታ በመጫን ላይ…",
+        "unavailable": "ለዚህ ሊንክ ቅድመ እይታ ማሳየት አልቻልንም። እባክዎ ዕቃውን ከታች ይግለጹ።",
+        "viewOnStore": "በመደብሩ ይመልከቱ",
+        "priceNote": "የመደብሩ ዋጋ። የመጨረሻ ዋጋዎ የመላኪያ እና የአገልግሎት ክፍያን ያካትታል።",
+        "noPrice": "ዋጋው በዋጋ ግምቱ ውስጥ ይገለጻል"
+      },
+      "linkLabel": "የዕቃውን ሊንክ ይለጥፉ",
+      "linkButton": "ዕቃውን ያግኙ",
+      "color": "ቀለም",
+      "colorPlaceholder": "ለምሳሌ ጥቁር",
+      "qtyDecrease": "ብዛት ቀንስ",
+      "qtyIncrease": "ብዛት ጨምር",
+      "options": {
+        "color": "ቀለም",
+        "size": "መጠን",
+        "style": "ዓይነት",
+        "unavailable": "አይገኝም"
+      },
+      "destinations": {
+        "Canada": "ካናዳ",
+        "Ethiopia": "ኢትዮጵያ",
+        "Uganda": "ዩጋንዳ"
+      },
+      "size": "መጠን",
+      "sizePlaceholder": "ለምሳሌ US 9 / M",
+      "price": "የመደብሩ ዋጋ",
+      "pricePlaceholder": "ለምሳሌ $49.99",
+      "contactVia": "የሚመርጡት የመልዕክት መተግበሪያ",
+      "contactViaPlaceholder": "መተግበሪያ ይምረጡ",
+      "chatSuccessTitle": "ጥያቄዎ ተልኳል!",
+      "chatSuccess": "ጥያቄዎ በተሳካ ሁኔታ ተልኳል። ቡድናችን በቅርቡ ያገኝዎታል።",
+      "sending": "በመላክ ላይ…",
+      "captchaRequired": "እባክዎ “I'm not a robot” የሚለውን ምልክት ያድርጉ።",
+      "verifyError": "ጥያቄዎን ማረጋገጥ አልቻልንም። እባክዎ ሳጥኑን እንደገና ምልክት አድርገው ይላኩ።"
+    },
+    "panel": {
+      "emptyTitle": "ዕቃዎ እዚህ ይታያል",
+      "emptyText": "ዕቃውን ለማየት፣ ቀለም ለመምረጥ እና ብዛት ለመወሰን ከAmazon፣ SHEIN፣ Walmart ወይም eBay ሊንክ ይለጥፉ።",
+      "ctaQuestion": "ይህን እንድንገዛልዎ ይፈልጋሉ?",
+      "ctaButton": "አዎ፣ ጥያቄ ላክ",
+      "change": "ቀይር"
+    },
+    "manual": {
+      "unavailableTitle": "ይህን ዕቃ መጫን አልቻልንም",
+      "manualTitle": "የዕቃውን ዝርዝር ያስገቡ",
+      "manualText": "የሚያውቁትን ይሙሉ፣ ቀሪውን እኛ እናደርጋለን።",
+      "retry": "እንደገና ይሞክሩ",
+      "enterManually": "ትክክለኛው ዕቃ አይደለም? ዝርዝሩን በእጅ ያስገቡ"
     }
   }
 }
