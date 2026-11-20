@@ -69,9 +69,9 @@ const EMPTY = {
   contactMethod: "",
 };
 
-// Requests are sent as a chat message to this number: +1 (437) 997-7533.
+// Requests are sent as a chat message to this number: 0994104901 (Ethiopia, +251 99 410 4901).
 // Change it here when the business number changes.
-const REQUEST_PHONE = "14379977533";
+const REQUEST_PHONE = "251994104901";
 
 // reCAPTCHA v2 site key (public). Without it the checkbox is hidden and the
 // server skips the reCAPTCHA step (handy for local development).
