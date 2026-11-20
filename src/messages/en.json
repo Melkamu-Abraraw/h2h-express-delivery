@@ -4,8 +4,7 @@
     "about": "About",
     "services": "Services",
     "contact": "Contact",
-    "login": "Login",
-    "signup": "Sign Up"
+    "buyForMe": "Buy for Me"
   },
   "hero": {
     "tagline": "Fast & Reliable",
@@ -646,6 +645,112 @@
       "sending": "Sending...",
       "toastSuccess": "Message sent! We'll get back to you soon.",
       "toastError": "Something went wrong. Please try again."
+    }
+  },
+  "BuyForMe": {
+    "hero": {
+      "title": "Find something online,",
+      "titleHighlight": "we bring it to you.",
+      "subtitle": "Send us the link. We buy it and deliver it to your door."
+    },
+    "steps": {
+      "items": [
+        {
+          "title": "Send the link",
+          "text": "Paste it in the form"
+        },
+        {
+          "title": "Get a quote",
+          "text": "Price, shipping & fee"
+        },
+        {
+          "title": "We buy & ship",
+          "text": "Once you pay"
+        },
+        {
+          "title": "You receive it",
+          "text": "Right at your door"
+        }
+      ]
+    },
+    "stores": {
+      "label": "Stores:"
+    },
+    "form": {
+      "subheading": "Fill in the details below and we'll get back to you with a quote.",
+      "contactGroup": "Your details",
+      "itemGroup": "Item details",
+      "name": "Full name",
+      "namePlaceholder": "Your full name",
+      "phone": "Phone number",
+      "email": "Email",
+      "emailPlaceholder": "you@example.com",
+      "city": "Destination",
+      "cityPlaceholder": "Select a country",
+      "productDetails": "Item name",
+      "productDetailsPlaceholder": "e.g. Nike Air Force 1 '07",
+      "quantity": "Quantity",
+      "optional": "optional",
+      "submit": "Send Request",
+      "another": "Request another item",
+      "errors": {
+        "required": "This field is required.",
+        "phone": "Enter a valid phone number (e.g. +251 91 234 5678).",
+        "email": "Enter a valid email address.",
+        "link": "Enter a valid link starting with http:// or https://.",
+        "quantity": "Quantity must be at least 1.",
+        "linkStore": "We accept links from {stores} only. For other stores, message us.",
+        "linkShort": "Please paste the full product link from the store (not a shortened link)."
+      },
+      "preview": {
+        "loading": "Loading product preview…",
+        "unavailable": "We couldn't load a preview for this link. Please describe the item below.",
+        "viewOnStore": "View on store",
+        "priceNote": "Store price. Your final quote includes shipping and service fee.",
+        "noPrice": "Price will be in your quote"
+      },
+      "linkLabel": "Paste a product link",
+      "linkButton": "Find item",
+      "color": "Colour",
+      "colorPlaceholder": "e.g. Black",
+      "qtyDecrease": "Decrease quantity",
+      "qtyIncrease": "Increase quantity",
+      "options": {
+        "color": "Colour",
+        "size": "Size",
+        "style": "Style",
+        "unavailable": "not available"
+      },
+      "destinations": {
+        "Canada": "Canada",
+        "Ethiopia": "Ethiopia",
+        "Uganda": "Uganda"
+      },
+      "size": "Size",
+      "sizePlaceholder": "e.g. US 9 / M",
+      "price": "Store price",
+      "pricePlaceholder": "e.g. $49.99",
+      "contactVia": "Preferred chat",
+      "contactViaPlaceholder": "Select an app",
+      "chatSuccessTitle": "Request sent!",
+      "chatSuccess": "Your request has been sent successfully. Our team will contact you shortly.",
+      "sending": "Sending…",
+      "captchaRequired": "Please tick “I'm not a robot”.",
+      "verifyError": "We couldn't verify your request. Please tick the box again and resend."
+    },
+    "panel": {
+      "emptyTitle": "Your item will appear here",
+      "emptyText": "Paste a link from Amazon, SHEIN, Walmart or eBay to see the product, pick a colour and choose how many you want.",
+      "ctaQuestion": "Want us to buy this for you?",
+      "ctaButton": "Yes, send request",
+      "change": "Change"
+    },
+    "manual": {
+      "unavailableTitle": "We couldn't load this product",
+      "manualTitle": "Enter the item details",
+      "manualText": "Fill in what you know and we'll take care of the rest.",
+      "retry": "Try again",
+      "enterManually": "Not the right item? Enter details manually"
     }
   }
 }
