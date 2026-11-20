@@ -11,11 +11,14 @@
 //   SCRAPER_PREMIUM       "true" to use premium/residential proxies (more
 //                         reliable for Amazon, costs more credits). Default false.
 //   SCRAPER_JS_STORES     comma list of store ids to render with JavaScript
-//                         (slower, costs more). Default "shein,temu,aliexpress,bestbuy".
+//                         (much slower, costs more). Default: none — plain
+//                         fetches already include the product tags for
+//                         AliExpress, and rendering timed out (45s+) in tests.
 //   SCRAPER_DAILY_LIMIT   max paid lookups per server instance per day. Default 300.
 // Without SCRAPER_PROVIDER + SCRAPER_API_KEY the fallback is simply off.
 
-const TIMEOUT_MS = 45000;
+// Keep customers' wait short; plain fetches take ~3–5s.
+const TIMEOUT_MS = 25000;
 
 let day = "";
 let usedToday = 0;
@@ -26,7 +29,7 @@ export function scraperEnabled() {
 
 function jsStores() {
   return new Set(
-    (process.env.SCRAPER_JS_STORES ?? "shein,temu,aliexpress,bestbuy")
+    (process.env.SCRAPER_JS_STORES ?? "")
       .split(",")
       .map((s) => s.trim().toLowerCase())
       .filter(Boolean),
